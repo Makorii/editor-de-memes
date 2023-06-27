@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    font-size: 1px;
+}
+
+/* HEADER */
+
+header {
+    background-color: #371B58;
+}
+
+.contenedor-header {
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+
+.header-titulo {
+    font-size: 35rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* BOTON PERSONALIZADO */
+
+.inputs-personalizados {
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.is-focus:focus, .is-hover:hover {
+    background-color: #7858a6d2;
+}
+
+.boton-personalizacion {
+    background-color: #371B58;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    color: white;
+    font-size: 14.5rem;
+    font-weight: 500;
+    padding: 8px;
+    transition: background-color 0.2s;
+}
+
+
+/* PERSONALIZACION DE MEMES */
+
+main {
+    background-color: #4C3575;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 111px);
+}
+
+.tarjeta-meme {
+    margin: 70px 0;
+    width: 31%;
+    background-color: black;
+    text-align: center;
+}
+
+.texto-personalizado {
+    font-size: 35rem;
+    font-weight: 900;
+    background-color: white;
+    padding: 30px;
+}
+
+.imagen-cargada {
+    height: 350px;
+}
+
+.boton-descargar {
+    font-size: 14rem;
+    padding: 15px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+
+/* FILTRO IMAGEN */
+
+.contenedor-editor-imagen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    padding: 20px;
+    background-color: #5B4B8A;
+    height: 100vh;
+    width: 15vw;
+}
+
+.titulo-editor {
+    font-size: 20rem;
+    text-align: center;
+    padding: 20px;
+}
+
+h4 {
+    font-size: 14rem;
+    padding: 10px 0;
+}
+
+.url-imagen {
+    padding: 8px;
+    outline: none;
+    width: 100%;
+}
+
+.filtros {
+    display: flex;
+    flex-direction: column;
+    font-size: 13rem;
+    padding: 5px 0;
+}
+
+.rango-filtro {
+    appearance: none;
+    height: 5px;
+    margin: 8px 0;
+    
+}
+
+.contenedor-flexible {
+    display: flex;
+}
+
+.contenedor-color{
+    background-color: #7858A6;
+    padding: 8px 8px;
+    align-items: center;
+    margin-right: 15px;
+    border-radius: 3px;
+}
+
+.filtro-color {
+    border-radius: 100%;
+    border: none;
+    width: 25px;
+    height: 27px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.color {
+    font-size: 12rem;
+}
+
+.filtro-opciones {
+    color: white;
+    outline: none;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+
+.restaurar-filtros {
+    padding: 8px 10px;
+    font-size: 14rem;
+    background-color: #7858A6;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin: 20px 0;
+}
+
+input, select {
+    background-color: #7858A6;
+    border: none;
+    border-radius: 3px
+}
+
+/* TEXTO */
+
+.contenedor-editor-texto {
+    position: absolute;
+    top: 0;
+    color: white;
+    padding: 20px;
+    background-color: #5B4B8A;
+    height: 100vh;
+    width: 15vw;
+}
+
+textarea {
+    outline: none;
+    resize: vertical;
+    width: 100%;
+}
+
+.opcion-diferente {
+    font-size: 11rem;
+    margin-left: 5px;
+}
+
+.contenedor-sin {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.opciones-fuentes {
+    width: 100%;
+}
+
+.contenedor-fuente {
+    margin: 5px 0;
+    display: flex;
+}
+
+.numero-fuente {
+    width: 50%;
+}
+
+.alineacion-fuente {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 5.2px;
+}
+
+.fa-align-left, .fa-align-center, .fa-align-right {
+    padding: 12px;
+    background-color: #7858A6;
+    color: white;
+}
+
+.rango-filtro::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+}
+
+input[type=color]::-webkit-color-swatch {
+    border: none;
+    border-radius: 100%;
+}
+
+button {
+    border: none;
+    border-radius: 3px;
+}
+
+.contenedor-fondo {
+    display: flex;
+}
+
+.texto-fondo, .texto-color {
+    border: none;
+    width: 25px;
+    height: 27px;
+    cursor: pointer;
+}

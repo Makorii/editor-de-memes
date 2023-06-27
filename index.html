@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c99d9e0ff9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Editor de memes</title>
+</head>
+<body>
+    <header>
+        <div class="contenedor-header">
+            <h1 class="header-titulo">
+                Generador de Memes
+            </h1>
+            <button class="boton-personalizacion is-focus is-hover">
+                <i class="fa-regular fa-image"></i>
+                Imagen
+            </button>
+            <button class="boton-personalizacion is-focus is-hover">
+                <i class="fa-solid fa-font"></i>
+                Texto
+            </button>
+            <button class="boton-personalizacion is-focus is-hover">
+                <i class="fa-regular fa-lightbulb"></i>
+                Modo oscuro
+            </button>
+        </div>
+    </header>
+    <main>
+        <article class="tarjeta-meme">
+            <div>
+                <h2 class="texto-arriba texto-personalizado">
+                    TOP TEXT
+                </h2>
+            </div>
+            <div class="imagen-cargada" >
+                
+            </div>
+            <div>
+                <h2 class="texto-personalizado">
+                    BOTTOM TEXT
+                </h2>
+            </div>
+        </article>
+        <button class="boton-descargar">
+            <i class="fa-solid fa-download"></i>
+            Descargar meme
+        </button>
+    </main>
+    <aside class="contenedor-editor-imagen">
+        <h3 class="titulo-editor">
+            IMAGEN
+        </h3>
+        <div class="">
+            <h4>
+                URL
+            </h4>
+            <input type="text" name="" id="url" class="url-imagen">
+        </div>
+        <div>
+            <h4>
+                FONDO
+            </h4>
+            <div class="contenedor-flexible">
+                <div class="contenedor-flexible contenedor-color">
+                    <input type="color" name="" id="" class="filtro-color">
+                    <p class="color">
+                        #FFFFFF
+                    </p>
+                </div>
+                <select name="" id="" class="filtro-opciones">
+                    <option value="">Ninguno</option>
+                    <option value="">Aclarar</option>
+                    <option value="">Oscurecer</option>
+                    <option value="">Diferencia</option>
+                    <option value="">Luminosidad</option>
+                    <option value="">Multiplicar</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <h4>
+                FILTROS
+            </h4>
+            <div class="filtros">
+                <label for="">
+                    BRILLO
+                </label>
+                <input type="range" name="" id="" class="rango-filtro">
+            </div>
+            <div class="filtros">
+                <label for="">
+                    OPACIDAD
+                </label>
+                <input type="range" name="" id="" class="rango-filtro">
+            </div>
+            <div class="filtros">
+                <label for="">
+                    CONTRASTE
+                </label>
+                <input type="range" name="" id="" class="rango-filtro">
+            </div>
+            <div class="filtros">
+                <label for="">
+                    DESENFOQUE
+                </label>
+                <input type="range" name="" id="" class="rango-filtro">
+            </div>
+            <div class="filtros">
+                <label for="">
+                    ESCALA DE GRISES
+                </label>
+                <input type="range" name="" id="" class="rango-filtro">
+            </div>
+            <div class="filtros">
+                <label for="">
+                    SEPIA
+                </label>
+                <input type="range" name="" id="" class="rango-filtro">
+            </div>
+            <div class="filtros">
+                <label for="">
+                    HUE
+                </label>
+                <input type="range" name="" id="" class="rango-filtro">
+            </div>
+            <div class="filtros">
+                <label for="">
+                    SATURADO
+                </label>
+                <input type="range" name="" id="" class="rango-filtro">
+            </div>
+            <div class="filtros">
+                <label for="">
+                    NEGATIVO
+                </label>
+                <input type="range" name="" id="" class="rango-filtro">
+            </div>
+        </div>
+        <button class="restaurar-filtros">
+            Reestablecer filtros
+        </button>
+    </aside>
+    <aside class="contenedor-editor-texto">
+        <h3 class="titulo-editor">
+            TEXTO
+        </h3>
+        <div>
+            <h4>
+                SUPERIOR
+            </h4>
+            <textarea name="" id="">TOP TEXT</textarea>
+        </div>
+        <div class="contenedor-sin">
+            <input type="checkbox" name="" id="">
+            <label for="" class="opcion-diferente">Sin texto superior</label>
+        </div>
+        <div>
+            <h4>
+                INFERIOR
+            </h4>
+            <textarea name="" id="">BOTTOM TEXT</textarea>
+            
+        </div>
+        <div class="contenedor-sin">
+            <input type="checkbox" name="" id="">
+            <label for="" class="opcion-diferente">Sin texto inferior</label>
+        </div>
+        <div>
+            <h4>
+                FUENTE
+            </h4>
+            <select name="" id="" class="filtro-opciones opciones-fuentes">
+                <option value="Arial">Arial</option>
+                <option value="Arial Black">Arial Black</option>
+                <option value="American Typewrite">American Typewriter</option>
+                <option value="Andale Mono">Andale Mono</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Impact" selected>Impact</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Time New Roman">Time New Roman</option>
+            </select>
+            <div class="contenedor-fuente">
+                <input type="number" name="" id="" class="numero-fuente">
+                <div class="alineacion-fuente">
+                    <button>
+                        <i class="fa-solid fa-align-left"></i>
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-align-center"></i>
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-align-right"></i>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="contenedor-fondo">
+            <div>
+                <h4>
+                    FONDO
+                </h4>
+                <div>
+                    <input type="color" name="" id="" class="texto-fondo">
+                    <span class="color">#000000</span>
+                </div>
+            </div>
+            <div>
+                <h4>
+                    COLOR
+                </h4>
+                <div>
+                    <input type="color" name="" id="" class="texto-color">
+                    <span class="color">#FFFFFF</span>
+                </div>
+                
+            </div>
+        </div>
+        <div class="contenedor-sin">
+            <input type="checkbox" name="" id="">
+            <label for="" class="opcion-diferente">Fondo transparente</label>
+        </div>
+        <div>
+            <h4>
+                CONTORNO
+            </h4>
+            <div>
+                <button>
+                    Ninguno
+                </button>
+                <button>
+                    Claro
+                </button>
+                <button>
+                    Oscuro
+                </button>
+            </div>
+        </div>
+        <div>
+            <h4>
+                ESPACIADO
+            </h4>
+            <input type="number" name="" id="">
+        </div>
+        <div>
+            <h4>
+                INTERLINEADO
+            </h4>
+            <select name="" id="">
+                <option value="">0.8</option>
+                <option value="">1</option>
+                <option value="" selected>1.2</option>
+                <option value="">1.5</option>
+                <option value="">2</option>
+                <option value="">2.5</option>
+            </select>
+        </div>
+    </aside>
+    <script src="index.js"></script>
+</body>
+</html>
