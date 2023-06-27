@@ -28,19 +28,19 @@ header {
 }
 
 /* BOTON PERSONALIZADO */
-
 .inputs-personalizados {
     border: none;
     border-radius: 3px;
     outline: none;
     cursor: pointer;
+    background-color: #7858A6;
 }
-
+/* FOCUS & HOVER */
 .is-focus:focus, .is-hover:hover {
     background-color: #7858a6d2;
 }
 
-.boton-personalizacion {
+.opcion-de-personalizacion {
     background-color: #371B58;
     border: none;
     cursor: pointer;
