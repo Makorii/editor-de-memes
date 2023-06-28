@@ -34,10 +34,11 @@ header {
     outline: none;
     cursor: pointer;
     background-color: #7858A6;
+    color: white;
 }
 /* FOCUS & HOVER */
 .is-focus:focus, .is-hover:hover {
-    background-color: #7858a6d2;
+    background-color: #bcabd48d;
 }
 
 .opcion-de-personalizacion {
@@ -54,12 +55,15 @@ header {
 
 
 /* PERSONALIZACION DE MEMES */
-
-main {
-    background-color: #4C3575;
+/* CONTENEDOR FLEXIBLE*/
+.contenedor-flexible {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+main {
+    background-color: #4C3575;
     height: calc(100vh - 111px);
 }
 
@@ -70,14 +74,14 @@ main {
     text-align: center;
 }
 
-.texto-personalizado {
+.texto-meme {
     font-size: 35rem;
     font-weight: 900;
     background-color: white;
     padding: 30px;
 }
 
-.imagen-cargada {
+.imagen-meme {
     height: 350px;
 }
 
@@ -91,20 +95,23 @@ main {
 }
 
 
-/* FILTRO IMAGEN */
-
-.contenedor-editor-imagen {
+/* PERSONALIZACION IMAGEN*/
+/* POSICION ABSOLUTA*/
+.is-absolute {
     position: absolute;
     top: 0;
     right: 0;
-    color: white;
-    padding: 20px;
-    background-color: #5B4B8A;
     height: 100vh;
     width: 15vw;
+    background-color: #5B4B8A;
 }
 
-.titulo-editor {
+.apartado {
+    color: white;
+    padding: 20px;
+}
+
+.apartado-titulo{
     font-size: 20rem;
     text-align: center;
     padding: 20px;
@@ -132,7 +139,6 @@ h4 {
     appearance: none;
     height: 5px;
     margin: 8px 0;
-    
 }
 
 .contenedor-flexible {
@@ -149,11 +155,9 @@ h4 {
 
 .filtro-color {
     border-radius: 100%;
-    border: none;
     width: 25px;
     height: 27px;
     margin-right: 5px;
-    cursor: pointer;
 }
 
 .color {
@@ -162,41 +166,24 @@ h4 {
 
 .filtro-opciones {
     color: white;
-    outline: none;
     padding: 8px 10px;
-    border-radius: 3px;
 }
 
 .restaurar-filtros {
     padding: 8px 10px;
     font-size: 14rem;
-    background-color: #7858A6;
     color: white;
-    border: none;
-    border-radius: 3px;
     margin: 20px 0;
 }
 
-input, select {
-    background-color: #7858A6;
-    border: none;
-    border-radius: 3px
-}
 
 /* TEXTO */
-
-.contenedor-editor-texto {
-    position: absolute;
-    top: 0;
-    color: white;
-    padding: 20px;
-    background-color: #5B4B8A;
-    height: 100vh;
-    width: 15vw;
+/*todavia no sé como poner uno "encima" del otro con js*/
+.temporal {
+    left: 0;
 }
 
 textarea {
-    outline: none;
     resize: vertical;
     width: 100%;
 }
@@ -266,4 +253,8 @@ button {
     width: 25px;
     height: 27px;
     cursor: pointer;
+}
+
+.contorno {
+    background-color: #7858A6;
 }

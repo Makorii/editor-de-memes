@@ -30,18 +30,19 @@
             </button>
         </div>
     </header>
-    <main>
+    <!-- PERSONALIZACION DE MEMES -->
+    <main class="contenedor-flexible">
         <article class="tarjeta-meme">
             <div>
-                <h2 class="texto-arriba texto-personalizado">
+                <h2 class="texto-meme">
                     TOP TEXT
                 </h2>
             </div>
-            <div class="imagen-cargada" >
+            <div class="imagen-meme" >
                 
             </div>
             <div>
-                <h2 class="texto-personalizado">
+                <h2 class="texto-meme">
                     BOTTOM TEXT
                 </h2>
             </div>
@@ -51,15 +52,16 @@
             Descargar meme
         </button>
     </main>
-    <aside class="contenedor-editor-imagen">
-        <h3 class="titulo-editor">
+    <!-- PERSONALIZACION IMAGEN -->
+    <aside class="apartado is-absolute">
+        <h3 class="apartado-titulo">
             IMAGEN
         </h3>
         <div class="">
             <h4>
                 URL
             </h4>
-            <input type="text" name="" id="url" class="url-imagen">
+            <input type="text" name="" id="url" class="url-imagen inputs-personalizados">
         </div>
         <div>
             <h4>
@@ -67,12 +69,12 @@
             </h4>
             <div class="contenedor-flexible">
                 <div class="contenedor-flexible contenedor-color">
-                    <input type="color" name="" id="" class="filtro-color">
+                    <input type="color" name="" id="" class="filtro-color inputs-personalizados">
                     <p class="color">
                         #FFFFFF
                     </p>
                 </div>
-                <select name="" id="" class="filtro-opciones">
+                <select name="" id="" class="filtro-opciones inputs-personalizados">
                     <option value="">Ninguno</option>
                     <option value="">Aclarar</option>
                     <option value="">Oscurecer</option>
@@ -90,70 +92,71 @@
                 <label for="">
                     BRILLO
                 </label>
-                <input type="range" name="" id="" class="rango-filtro">
+                <input type="range" name="" id="" class="rango-filtro inputs-personalizados">
             </div>
             <div class="filtros">
                 <label for="">
                     OPACIDAD
                 </label>
-                <input type="range" name="" id="" class="rango-filtro">
+                <input type="range" name="" id="" class="rango-filtro inputs-personalizados">
             </div>
             <div class="filtros">
                 <label for="">
                     CONTRASTE
                 </label>
-                <input type="range" name="" id="" class="rango-filtro">
+                <input type="range" name="" id="" class="rango-filtro inputs-personalizados">
             </div>
             <div class="filtros">
                 <label for="">
                     DESENFOQUE
                 </label>
-                <input type="range" name="" id="" class="rango-filtro">
+                <input type="range" name="" id="" class="rango-filtro inputs-personalizados">
             </div>
             <div class="filtros">
                 <label for="">
                     ESCALA DE GRISES
                 </label>
-                <input type="range" name="" id="" class="rango-filtro">
+                <input type="range" name="" id="" class="rango-filtro inputs-personalizados">
             </div>
             <div class="filtros">
                 <label for="">
                     SEPIA
                 </label>
-                <input type="range" name="" id="" class="rango-filtro">
+                <input type="range" name="" id="" class="rango-filtro inputs-personalizados">
             </div>
             <div class="filtros">
                 <label for="">
                     HUE
                 </label>
-                <input type="range" name="" id="" class="rango-filtro">
+                <input type="range" name="" id="" class="rango-filtro inputs-personalizados">
             </div>
             <div class="filtros">
                 <label for="">
                     SATURADO
                 </label>
-                <input type="range" name="" id="" class="rango-filtro">
+                <input type="range" name="" id="" class="rango-filtro inputs-personalizados">
             </div>
             <div class="filtros">
                 <label for="">
                     NEGATIVO
                 </label>
-                <input type="range" name="" id="" class="rango-filtro">
+                <input type="range" name="" id="" class="rango-filtro inputs-personalizados">
             </div>
         </div>
-        <button class="restaurar-filtros">
+        <button class="restaurar-filtros inputs-personalizados">
             Reestablecer filtros
         </button>
     </aside>
-    <aside class="contenedor-editor-texto">
-        <h3 class="titulo-editor">
+    <!-- PERSONALIZACION TEXTO -->
+    <aside class="apartado is-absolute temporal">
+        <h3 class="apartado-titulo">
             TEXTO
         </h3>
         <div>
             <h4>
                 SUPERIOR
             </h4>
-            <textarea name="" id="">TOP TEXT</textarea>
+            <textarea name="" id="" class="inputs-personalizados">TOP TEXT</textarea>
         </div>
         <div class="contenedor-sin">
             <input type="checkbox" name="" id="">
@@ -163,7 +166,7 @@
             <h4>
                 INFERIOR
             </h4>
-            <textarea name="" id="">BOTTOM TEXT</textarea>
+            <textarea name="" id="" class="inputs-personalizados">BOTTOM TEXT</textarea>
             
         </div>
         <div class="contenedor-sin">
@@ -174,7 +177,7 @@
             <h4>
                 FUENTE
             </h4>
-            <select name="" id="" class="filtro-opciones opciones-fuentes">
+            <select name="" id="" class="filtro-opciones opciones-fuentes inputs-personalizados">
                 <option value="Arial">Arial</option>
                 <option value="Arial Black">Arial Black</option>
                 <option value="American Typewrite">American Typewriter</option>
@@ -186,7 +189,7 @@
                 <option value="Time New Roman">Time New Roman</option>
             </select>
             <div class="contenedor-fuente">
-                <input type="number" name="" id="" class="numero-fuente">
+                <input type="number" name="" id="" class="numero-fuente inputs-personalizados">
                 <div class="alineacion-fuente">
                     <button>
                         <i class="fa-solid fa-align-left"></i>
@@ -207,7 +210,7 @@
                     FONDO
                 </h4>
                 <div>
-                    <input type="color" name="" id="" class="texto-fondo">
+                    <input type="color" name="" id="" class="texto-fondo inputs-personalizados">
                     <span class="color">#000000</span>
                 </div>
             </div>
@@ -216,7 +219,7 @@
                     COLOR
                 </h4>
                 <div>
-                    <input type="color" name="" id="" class="texto-color">
+                    <input type="color" name="" id="" class="texto-color inputs-personalizados">
                     <span class="color">#FFFFFF</span>
                 </div>
                 
@@ -231,13 +234,13 @@
                 CONTORNO
             </h4>
             <div>
-                <button>
+                <button class="contorno opcion-de-personalizacion is-focus is-hover">
                     Ninguno
                 </button>
-                <button>
+                <button class="contorno opcion-de-personalizacion is-focus is-hover">
                     Claro
                 </button>
-                <button>
+                <button class="contorno opcion-de-personalizacion is-focus is-hover">
                     Oscuro
                 </button>
             </div>
@@ -246,13 +249,13 @@
             <h4>
                 ESPACIADO
             </h4>
-            <input type="number" name="" id="">
+            <input type="number" name="" id="" class="inputs-personalizados">
         </div>
         <div>
             <h4>
                 INTERLINEADO
             </h4>
-            <select name="" id="">
+            <select name="" id="" class="inputs-personalizados">
                 <option value="">0.8</option>
                 <option value="">1</option>
                 <option value="" selected>1.2</option>
