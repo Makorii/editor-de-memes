@@ -5,9 +5,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-html {
-    font-size: 1px;
-}
 
 /* HEADER */
 
@@ -22,7 +19,7 @@ header {
 }
 
 .header-titulo {
-    font-size: 35rem;
+    font-size: 2.1rem;
     margin-bottom: 10px;
     font-weight: 600;
 }
@@ -38,7 +35,7 @@ header {
 }
 /* FOCUS & HOVER */
 .is-focus:focus, .is-hover:hover {
-    background-color: #bcabd48d;
+    background-color: #ac90d48d;
 }
 
 .opcion-de-personalizacion {
@@ -47,7 +44,7 @@ header {
     cursor: pointer;
     margin: 10px;
     color: white;
-    font-size: 14.5rem;
+    font-size: 0.8rem;
     font-weight: 500;
     padding: 8px;
     transition: background-color 0.2s;
@@ -72,10 +69,12 @@ main {
     width: 31%;
     background-color: black;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .texto-meme {
-    font-size: 35rem;
+    font-size: 2.1rem;
     font-weight: 900;
     background-color: white;
     padding: 30px;
@@ -86,7 +85,7 @@ main {
 }
 
 .boton-descargar {
-    font-size: 14rem;
+    font-size: 0.8rem;
     padding: 15px;
     background-color: #2e7d32;
     color: white;
@@ -112,13 +111,13 @@ main {
 }
 
 .apartado-titulo{
-    font-size: 20rem;
+    font-size: 1.5rem;
     text-align: center;
     padding: 20px;
 }
 
 h4 {
-    font-size: 14rem;
+    font-size: 0.8rem;
     padding: 10px 0;
 }
 
@@ -126,12 +125,48 @@ h4 {
     padding: 8px;
     outline: none;
     width: 100%;
+    cursor: text;
+}
+
+.contenedor-fondo-imagen {
+    display: flex;
+}
+
+.contenedor-color {
+    display: flex;
+    align-items: center;
+    background-color: #7858A6;
+    padding: 8px 10px;
+    margin-right: 15px;
+    border-radius: 3px;
+    width: 50%;
+}
+
+.filtro-color {
+    margin-right: 5px;
+    width: 25px;
+    height: 27px;
+}
+
+input[type=color]::-webkit-color-swatch {
+    border-radius: 100%;
+    border: none;
+}
+
+.color {
+    font-size: 0.75rem;
+}
+
+.filtro-opciones {
+    color: white;
+    padding: 8px 10px;
+    width: 50%;
 }
 
 .filtros {
     display: flex;
     flex-direction: column;
-    font-size: 13rem;
+    font-size: 0.8rem;
     padding: 5px 0;
 }
 
@@ -139,39 +174,12 @@ h4 {
     appearance: none;
     height: 5px;
     margin: 8px 0;
-}
-
-.contenedor-flexible {
-    display: flex;
-}
-
-.contenedor-color{
-    background-color: #7858A6;
-    padding: 8px 8px;
-    align-items: center;
-    margin-right: 15px;
-    border-radius: 3px;
-}
-
-.filtro-color {
-    border-radius: 100%;
-    width: 25px;
-    height: 27px;
-    margin-right: 5px;
-}
-
-.color {
-    font-size: 12rem;
-}
-
-.filtro-opciones {
-    color: white;
-    padding: 8px 10px;
+    cursor: default;
 }
 
 .restaurar-filtros {
     padding: 8px 10px;
-    font-size: 14rem;
+    font-size: 0.8rem;
     color: white;
     margin: 20px 0;
 }
@@ -183,13 +191,14 @@ h4 {
     left: 0;
 }
 
-textarea {
+.personalizacion-texto {
     resize: vertical;
     width: 100%;
+    cursor: text;
 }
 
 .opcion-diferente {
-    font-size: 11rem;
+    font-size: 0.6rem;
     margin-left: 5px;
 }
 
@@ -201,6 +210,7 @@ textarea {
 
 .opciones-fuentes {
     width: 100%;
+    cursor: default;
 }
 
 .contenedor-fuente {
@@ -210,6 +220,7 @@ textarea {
 
 .numero-fuente {
     width: 50%;
+    cursor: text;
 }
 
 .alineacion-fuente {
@@ -219,9 +230,13 @@ textarea {
     margin-left: 5.2px;
 }
 
-.fa-align-left, .fa-align-center, .fa-align-right {
-    padding: 12px;
+.boton-alineancion {
+    padding: 11px;
     background-color: #7858A6;
+    cursor: default;
+}
+
+.fa-align-left, .fa-align-center, .fa-align-right {
     color: white;
 }
 
@@ -234,27 +249,72 @@ textarea {
     background-color: white;
 }
 
-input[type=color]::-webkit-color-swatch {
-    border: none;
-    border-radius: 100%;
-}
-
-button {
-    border: none;
-    border-radius: 3px;
-}
-
 .contenedor-fondo {
     display: flex;
 }
 
 .texto-fondo, .texto-color {
-    border: none;
     width: 25px;
     height: 27px;
-    cursor: pointer;
+}
+
+.contenedor-contorno {
+    display: flex;
 }
 
 .contorno {
     background-color: #7858A6;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    padding: 11px;
+}
+
+.espaciado {
+    padding: 11px;
+    cursor: text;
+}
+
+.interlineado {
+    padding: 11px;
+    cursor: default;
+}
+
+/* ----- MOBILE ----- */
+
+@media (max-width: 480px) {
+    html {
+        font-size: 11px;
+    }
+
+    .header-titulo {
+        padding: 3px;
+    }
+
+    .opcion-de-personalizacion {
+        font-size: 1.2rem;
+        margin: 5px;
+    }
+
+    .apartado {
+        display: none;
+    }
+
+    /* PERSONALIZACION DE MEMES */
+    .tarjeta-meme {
+        width: 90%;
+    }
+
+    .texto-meme {
+        font-size: 1.3rem;
+        padding: 5px;
+    }
+
+    .imagen-meme {
+        height: 200px;
+    }
+
+    .boton-descargar {
+        font-size: 1.2rem;
+    }
+
 }
