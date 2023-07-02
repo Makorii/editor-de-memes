@@ -118,6 +118,17 @@ botonModoClaro.addEventListener("click", () => {
     interlineado.classList.remove("input-claro");
 })
 
+const urlImagen = document.getElementById("url-imagen");
+const imagenMeme = document.getElementById("contenedor-imagen-meme");
+console.log(imagenMeme, urlImagen);
+
+urlImagen.addEventListener("input", () => {
+    imagenMeme.style.backgroundImage = `url("${urlImagen.value}")`;
+    imagenMeme.style.backgroundPosition = "top";
+    imagenMeme.style.backgroundSize = "cover";
+    imagenMeme.style.backgroundRepeat = "no-repeat";
+})
+
 
 
 
