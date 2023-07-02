@@ -130,7 +130,11 @@ urlImagen.addEventListener("input", () => {
 })
 
 
+const colorFondoMeme = document.getElementById("color-fondo-meme");
 
+colorFondoMeme.addEventListener("input", () => {
+    imagenMeme.style.backgroundColor = `${colorFondoMeme.value}`;
+})
 
 
 
