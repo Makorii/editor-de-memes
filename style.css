@@ -237,7 +237,6 @@ input[type=color]::-webkit-color-swatch {
 .boton-alineancion {
     padding: 11px;
     background-color: #7858A6;
-    cursor: default;
 }
 
 .fa-align-left, .fa-align-center, .fa-align-right {
@@ -300,6 +299,10 @@ input[type=color]::-webkit-color-swatch {
 
 .input-claro {
     background-color: #E1CCEC;
+}
+
+.texto-claro {
+    color: #371B58;
 }
 
 /* ##################### RESPONSIVE ######################## */

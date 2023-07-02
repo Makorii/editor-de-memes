@@ -13,7 +13,7 @@
 <body>
     <header class="header-oscuro" id="header">
         <div class="contenedor-header">
-            <h1 class="header-titulo">
+            <h1 class="header-titulo" id="titulo-header">
                 Generador de Memes
             </h1>
             <button class="opcion-de-personalizacion is-focus is-hover" id="boton-imagen">
@@ -41,7 +41,7 @@
                 TOP TEXT
             </h2>
             <div class="imagen-meme" id="contenedor-imagen-meme"> </div>
-            <h2 class="texto-meme">
+            <h2 class="texto-meme" id="texto-abajo">
                 BOTTOM TEXT
             </h2>
         </article>
@@ -87,55 +87,55 @@
                 FILTROS
             </h4>
             <div class="filtros">
-                <label for="">
+                <label for="brillo">
                     BRILLO
                 </label>
                 <input type="range" name="" id="brillo" class="rango-filtro inputs-personalizados is-focus" value="1" min="0" max="1" step="0.1">
             </div>
             <div class="filtros">
-                <label for="">
+                <label for="opacidad">
                     OPACIDAD
                 </label>
                 <input type="range" name="" id="opacidad" class="rango-filtro inputs-personalizados is-focus" value="1" min="0" max="1" step="0.1">
             </div>
             <div class="filtros">
-                <label for="">
+                <label for="contraste">
                     CONTRASTE
                 </label>
                 <input type="range" name="" id="contraste" class="rango-filtro inputs-personalizados is-focus" value="1" min="1" max="10" step="0.1">
             </div>
             <div class="filtros">
-                <label for="">
+                <label for="desenfoque">
                     DESENFOQUE
                 </label>
                 <input type="range" name="" id="desenfoque" class="rango-filtro inputs-personalizados is-focus" value="0" min="0" max="10" step="0.1">
             </div>
             <div class="filtros">
-                <label for="">
+                <label for="escala-grises">
                     ESCALA DE GRISES
                 </label>
                 <input type="range" name="" id="escala-grises" class="rango-filtro inputs-personalizados is-focus" value="0" min="0" max="1" step="0.1">
             </div>
             <div class="filtros">
-                <label for="">
+                <label for="sepia">
                     SEPIA
                 </label>
                 <input type="range" name="" id="sepia" class="rango-filtro inputs-personalizados is-focus" value="0" min="0" max="1" step="0.1">
             </div>
             <div class="filtros">
-                <label for="">
+                <label for="hue">
                     HUE
                 </label>
                 <input type="range" name="" id="hue" class="rango-filtro inputs-personalizados is-focus" value="0" min="0" max="360">
             </div>
             <div class="filtros">
-                <label for="">
+                <label for="saturacion">
                     SATURADO
                 </label>
                 <input type="range" name="" id="saturacion" class="rango-filtro inputs-personalizados is-focus" value="1" min="1" max="10" step="0.1">
             </div>
             <div class="filtros">
-                <label for="">
+                <label for="negativo">
                     NEGATIVO
                 </label>
                 <input type="range" name="" id="negativo" class="rango-filtro inputs-personalizados is-focus" value="0" min="0" max="1" step="0.1">
@@ -154,10 +154,10 @@
             <h4>
                 SUPERIOR
             </h4>
-            <textarea name="" id="texto-superior" class="inputs-personalizados personalizacion-texto is-focus is-hover">TOP TEXT</textarea>
+            <textarea name="" id="texto-superior" class="inputs-personalizados personalizacion-texto is-focus is-hover" value="TOP TEXT">TOP TEXT</textarea>
         </div>
         <div class="contenedor-sin">
-            <input type="checkbox" name="" id="">
+            <input type="checkbox" name="" id="sin-texto-sup">
             <label for="" class="opcion-diferente">Sin texto superior</label>
         </div>
         <div>
@@ -187,7 +187,7 @@
                 <option value="Time New Roman">Time New Roman</option>
             </select>
             <div class="contenedor-fuente">
-                <input type="number" name="" id="" class="numero-fuente inputs-personalizados is-focus is-hover">
+                <input type="number" name="" id="tamanio-fuente" class="numero-fuente inputs-personalizados is-focus is-hover" value="40">
                 <div class="alineacion-fuente">
                     <button class="boton-alineancion inputs-personalizados is-hover" id="boton-alineacion-izquierda">
                         <i class="fa-solid fa-align-left"></i>
@@ -208,7 +208,7 @@
                     FONDO
                 </h4>
                 <div>
-                    <input type="color" name="" id="fondo-texto-arriba" class="texto-fondo inputs-personalizados">
+                    <input type="color" name="" id="fondo-texto" class="texto-fondo inputs-personalizados">
                     <span class="color">#000000</span>
                 </div>
             </div>
@@ -247,19 +247,19 @@
             <h4>
                 ESPACIADO
             </h4>
-            <input type="number" name="" id="" class="espaciado inputs-personalizados is-focus is-hover">
+            <input type="number" name="" id="" class="espaciado inputs-personalizados is-focus is-hover" value="35">
         </div>
         <div>
             <h4>
                 INTERLINEADO
             </h4>
             <select name="" id="interlineado" class="interlineado inputs-personalizados is-focus is-hover">
-                <option value="">0.8</option>
-                <option value="">1</option>
-                <option value="" selected>1.2</option>
-                <option value="">1.5</option>
-                <option value="">2</option>
-                <option value="">2.5</option>
+                <option value="0.8">0.8</option>
+                <option value="1">1</option>
+                <option value="1.2" selected>1.2</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2</option>
+                <option value="2.5">2.5</option>
             </select>
         </div>
     </aside>

@@ -31,12 +31,14 @@ const botonSinCortorno = document.getElementById("sin-contorno");
 const botonContornoClaro = document.getElementById("contorno-claro");
 const botonContornoOscuro = document.getElementById("contorno-oscuro");
 const interlineado = document.getElementById("interlineado");
+const tituloHeader = document.getElementById("titulo-header");
 
 
 botonModoOscuro.addEventListener("click", () => {
     botonModoOscuro.style.display = "none";
     botonModoClaro.style.display = "inline-block";
     header.classList.add("header-claro");
+    tituloHeader.classList.add("texto-claro");
     main.classList.add("main-claro");
     apartadoImagen.classList.add("apartado-claro");
     apartadoTexto.classList.add("apartado-claro");
@@ -80,6 +82,7 @@ botonModoClaro.addEventListener("click", () => {
     botonModoClaro.style.display = "none";
     botonModoOscuro.style.display = "inline-block";
     header.classList.remove("header-claro");
+    tituloHeader.classList.remove("texto-claro");
     main.classList.remove("main-claro");
     apartadoImagen.classList.remove("apartado-claro");
     apartadoTexto.classList.remove("apartado-claro");
@@ -191,56 +194,110 @@ negativo.addEventListener("click", () => {
     imagenMeme.style.filter = `invert(${negativo.value})`;
 });
 
+botonRestaurar.addEventListener("click", () => {
+    imagenMeme.style.filter = `brightness(${brillo.value = 1})`;
+    imagenMeme.style.filter = `opacity(${opacidad.value = 1})`;
+    imagenMeme.style.filter = `contrast(${contraste.value = 1})`;
+    imagenMeme.style.filter = `blur(${desenfoque.value = 0}px)`;
+    imagenMeme.style.filter = `grayscale(${escalaDeGrises.value = 0})`;
+    imagenMeme.style.filter = `sepia(${sepia.value = 0})`;
+    imagenMeme.style.filter = `hue-rotate(${hue.value = 0}deg)`;
+    imagenMeme.style.filter = `saturate(${saturacion.value = 1})`;
+    imagenMeme.style.filter = `invert(${negativo.value = 0})`;
+});
+
+// ################## APARTADO TEXTO #################
+
+const contenedorTextoSuperior = document.querySelector("#texto-arriba");
+
+textoSuperior.addEventListener("input", () => {
+    contenedorTextoSuperior.innerHTML = `${textoSuperior.value}`;
+})
+
+const sinTextoSuperior = document.querySelector("#sin-texto-sup");
+
+
+const contenedorTextoInferior = document.querySelector("#texto-abajo");
+
+textoInferior.addEventListener("input", () => {
+    contenedorTextoInferior.innerHTML = `${textoInferior.value}`;
+});
+
+contenedorTextoSuperior.style.fontFamily = "Impact";
+contenedorTextoInferior.style.fontFamily = "Impact";
+
+fuenteOpciones.addEventListener("change", () => {
+    contenedorTextoSuperior.style.fontFamily = `${fuenteOpciones.value}`;
+});
+
+fuenteOpciones.addEventListener("change", () => {
+    contenedorTextoInferior.style.fontFamily = `${fuenteOpciones.value}`;
+});
+
+const tamanioFuente = document.querySelector("#tamanio-fuente");
+
+tamanioFuente.addEventListener("change", () => {
+    contenedorTextoSuperior.style.fontSize = `${tamanioFuente.value}px`;
+});
+
+tamanioFuente.addEventListener("change", () => {
+    contenedorTextoInferior.style.fontSize = `${tamanioFuente.value}px`;
+});
+
+botonIzquierda.addEventListener("click", () => {
+    contenedorTextoSuperior.style.textAlign = "left";
+    contenedorTextoInferior.style.textAlign = "left";
+});
+
+botonCentro.addEventListener("click", () => {
+    contenedorTextoSuperior.style.textAlign = "center";
+    contenedorTextoInferior.style.textAlign = "center";
+});
+
+botonDerecha.addEventListener("click", () => {
+    contenedorTextoSuperior.style.textAlign = "right";
+    contenedorTextoInferior.style.textAlign = "right";
+});
+
+const fondoTexto = document.getElementById("fondo-texto");
+
+fondoTexto.addEventListener("input", () => {
+    contenedorTextoSuperior.style.backgroundColor = `${fondoTexto.value}`;
+    contenedorTextoInferior.style.backgroundColor = `${fondoTexto.value}`;
+})
+
+const colorTexto = document.getElementById("color-texto");
+
+colorTexto.addEventListener("input", () => {
+    contenedorTextoSuperior.style.color = `${colorTexto.value}`;
+    contenedorTextoInferior.style.color = `${colorTexto.value}`;
+})
+
+botonSinCortorno.addEventListener("click", () => {
+    contenedorTextoSuperior.style.textShadow = "none";
+    contenedorTextoInferior.style.textShadow = "none";
+});
+
+botonContornoClaro.addEventListener("click", () => {
+    contenedorTextoSuperior.style.textShadow = "2px 2px white, -2px 2px white, 2px -2px white, -2px -2px white";
+    contenedorTextoInferior.style.textShadow = "2px 2px white, -2px 2px white, 2px -2px white, -2px -2px white";
+});
+
+botonContornoOscuro.addEventListener("click", () => {
+    contenedorTextoSuperior.style.textShadow = "2px 2px black, -2px 2px black, 2px -2px black, -2px -2px black";
+    contenedorTextoInferior.style.textShadow = "2px 2px black, -2px 2px black, 2px -2px black, -2px -2px black";
+});
+
+
+interlineado.addEventListener("change", () => {
+    contenedorTextoSuperior.style.lineHeight = `${interlineado.value}`;
+    contenedorTextoInferior.style.lineHeight = `${interlineado.value}`;
+})
 
 
 
 
 
-
-
-
-//cambio de color del fondo de texto
-// const textoArriba = document.getElementById('texto-arriba');
-
-// const colorFondoTexto = document.getElementById('fondo-texto-arriba');
-
-// let colorCambiado;
-
-// const cambiarColorFondo = (color) => {
-//     textoArriba.style.backgroundColor = color;
-// }
-// colorFondoTexto.addEventListener('click', () => cambiarColorFondo(colorCambiado)); 
-
-// const obtenerColor = (e) => {
-//     colorCambiado = e.target.value;
-//     cambiarColorFondo(colorCambiado);
-// }
-
-// colorFondoTexto.addEventListener('input', obtenerColor);
-
-
-// //cambio de color de texto
-// let colorcito
-
-// const colorTexto = document.getElementById('color-texto');
-
-// const cambiarColorTexto = (color) => {
-//     textoArriba.style.color = color;
-// }
-
-// colorTexto.addEventListener('click', () => cambiarColorTexto(colorcito)); 
-
-// const obtenerColorTexto = (e) => {
-//     colorcito = e.target.value;
-//     cambiarColorTexto(colorcito);
-// }
-
-// colorTexto.addEventListener('input', obtenerColorTexto);
-
-
-
-
-//label en cada filtro del aside imagen
 
 // //.color-choice input[type="color"],
 // input[type="color"]::-webkit-color-swatch-wrapper,
@@ -251,5 +308,3 @@ negativo.addEventListener("click", () => {
 //   border-radius: 50%;
 //   background-color: transparent;
 // }    (color-choice es el nombre de mi clase)
-
-{/* <input type="reset"></input> */}
