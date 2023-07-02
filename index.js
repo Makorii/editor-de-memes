@@ -120,7 +120,6 @@ botonModoClaro.addEventListener("click", () => {
 
 const urlImagen = document.getElementById("url-imagen");
 const imagenMeme = document.getElementById("contenedor-imagen-meme");
-console.log(imagenMeme, urlImagen);
 
 urlImagen.addEventListener("input", () => {
     imagenMeme.style.backgroundImage = `url("${urlImagen.value}")`;
@@ -136,12 +135,61 @@ colorFondoMeme.addEventListener("input", () => {
     imagenMeme.style.backgroundColor = `${colorFondoMeme.value}`;
 })
 
+//PREGUNTAR COMO HACER EL SELECT FONDO OPCIONES
 
+const brillo = document.querySelector("#brillo");
 
+brillo.addEventListener("click", () => {
+    imagenMeme.style.filter = `brightness(${brillo.value})`;
+})
 
+const opacidad = document.querySelector("#opacidad");
 
+opacidad.addEventListener("click", () => {
+    imagenMeme.style.filter = `opacity(${opacidad.value})`;
+});
 
+const contraste = document.querySelector("#contraste");
 
+contraste.addEventListener("click", () => {
+    imagenMeme.style.filter = `contrast(${contraste.value})`;
+});
+
+const desenfoque = document.querySelector("#desenfoque");
+
+desenfoque.addEventListener("click", () => {
+    imagenMeme.style.filter = `blur(${desenfoque.value}px)`;
+});
+
+const escalaDeGrises = document.querySelector("#escala-grises");
+
+escalaDeGrises.addEventListener("click", () => {
+    imagenMeme.style.filter = `grayscale(${escalaDeGrises.value})`;
+});
+
+const sepia = document.querySelector("#sepia");
+
+sepia.addEventListener("click", () => {
+    imagenMeme.style.filter = `sepia(${sepia.value})`;
+});
+
+const hue = document.querySelector("#hue");
+
+hue.addEventListener("click", () => {
+    imagenMeme.style.filter = `hue-rotate(${hue.value}deg)`;
+});
+
+const saturacion = document.querySelector("#saturacion");
+
+saturacion.addEventListener("click", () => {
+    imagenMeme.style.filter = `saturate(${saturacion.value})`;
+});
+
+const negativo = document.querySelector("#negativo");
+
+negativo.addEventListener("click", () => {
+    imagenMeme.style.filter = `invert(${negativo.value})`;
+});
 
 
 
