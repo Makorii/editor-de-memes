@@ -11,27 +11,31 @@
     <title>Editor de memes</title>
 </head>
 <body>
-    <header>
+    <header class="header-oscuro" id="header">
         <div class="contenedor-header">
             <h1 class="header-titulo">
                 Generador de Memes
             </h1>
-            <button class="opcion-de-personalizacion is-focus is-hover">
+            <button class="opcion-de-personalizacion is-focus is-hover" id="boton-imagen">
                 <i class="fa-regular fa-image"></i>
                 Imagen
             </button>
-            <button class="opcion-de-personalizacion is-focus is-hover">
+            <button class="opcion-de-personalizacion is-focus is-hover" id="boton-texto">
                 <i class="fa-solid fa-font"></i>
                 Texto
             </button>
-            <button class="opcion-de-personalizacion is-focus is-hover">
+            <button class="opcion-de-personalizacion is-hover" id="modo-oscuro">
                 <i class="fa-regular fa-lightbulb"></i>
                 Modo oscuro
+            </button>
+            <button class="opcion-de-personalizacion is-hover oculto" id="modo-claro">
+                <i class="fa-regular fa-lightbulb"></i>
+                Modo claro
             </button>
         </div>
     </header>
     <!-- PERSONALIZACION DE MEMES -->
-    <main class="contenedor-flexible">
+    <main class="contenedor-flexible main-oscuro" id="main">
         <article class="tarjeta-meme">
             <h2 id="texto-arriba" class="texto-meme">
                 TOP TEXT
@@ -49,7 +53,7 @@
         </button>
     </main>
     <!-- PERSONALIZACION IMAGEN -->
-    <aside class="apartado is-absolute">
+    <aside class="apartado is-absolute" id="apartado-imagen">
         <h3 class="apartado-titulo">
             IMAGEN
         </h3>
@@ -57,20 +61,20 @@
             <h4>
                 URL
             </h4>
-            <input type="text" name="" id="url" class="url-imagen inputs-personalizados is-focus is-hover">
+            <input type="url" name="" id="url" class="url-imagen inputs-personalizados is-focus is-hover">
         </div>
         <div>
             <h4>
                 FONDO
             </h4>
             <div class="contenedor-fondo-imagen">
-                <div class="contenedor-color">
-                    <input type="color" name="" id="" class="filtro-color inputs-personalizados">
+                <div class="contenedor-color" id="contenedor-fondo-img">
+                    <input type="color" name="" id="fondo-img-meme" class="filtro-color inputs-personalizados">
                     <p class="color">
                         #FFFFFF
                     </p>
                 </div>
-                <select name="" id="" class="filtro-opciones inputs-personalizados is-focus is-hover">
+                <select name="" id="fondo-opciones" class="filtro-opciones inputs-personalizados is-focus is-hover">
                     <option value="">Ninguno</option>
                     <option value="">Aclarar</option>
                     <option value="">Oscurecer</option>
@@ -139,12 +143,12 @@
                 <input type="range" name="" id="" class="rango-filtro inputs-personalizados is-focus">
             </div>
         </div>
-        <button class="restaurar-filtros inputs-personalizados is-focus is-hover">
+        <button class="restaurar-filtros inputs-personalizados is-focus is-hover" type="reset" id="boton-restaurar">
             Reestablecer filtros
         </button>
     </aside>
     <!-- PERSONALIZACION TEXTO -->
-    <aside class="apartado is-absolute temporal">
+    <aside class="apartado is-absolute oculto" id="apartado-texto">
         <h3 class="apartado-titulo">
             TEXTO
         </h3>
@@ -152,7 +156,7 @@
             <h4>
                 SUPERIOR
             </h4>
-            <textarea name="" id="" class="inputs-personalizados personalizacion-texto is-focus is-hover">TOP TEXT</textarea>
+            <textarea name="" id="texto-superior" class="inputs-personalizados personalizacion-texto is-focus is-hover">TOP TEXT</textarea>
         </div>
         <div class="contenedor-sin">
             <input type="checkbox" name="" id="">
@@ -162,7 +166,7 @@
             <h4>
                 INFERIOR
             </h4>
-            <textarea name="" id="" class="inputs-personalizados personalizacion-texto is-focus is-hover">BOTTOM TEXT</textarea>
+            <textarea name="" id="texto-inferior" class="inputs-personalizados personalizacion-texto is-focus is-hover">BOTTOM TEXT</textarea>
             
         </div>
         <div class="contenedor-sin">
@@ -173,7 +177,7 @@
             <h4>
                 FUENTE
             </h4>
-            <select name="" id="" class="filtro-opciones opciones-fuentes inputs-personalizados is-focus is-hover">
+            <select name="" id="fuente-opciones" class="filtro-opciones opciones-fuentes inputs-personalizados is-focus is-hover">
                 <option value="Arial">Arial</option>
                 <option value="Arial Black">Arial Black</option>
                 <option value="American Typewrite">American Typewriter</option>
@@ -187,13 +191,13 @@
             <div class="contenedor-fuente">
                 <input type="number" name="" id="" class="numero-fuente inputs-personalizados is-focus is-hover">
                 <div class="alineacion-fuente">
-                    <button class="boton-alineancion inputs-personalizados is-hover">
+                    <button class="boton-alineancion inputs-personalizados is-hover" id="boton-alineacion-izquierda">
                         <i class="fa-solid fa-align-left"></i>
                     </button>
-                    <button class="boton-alineancion inputs-personalizados is-hover">
+                    <button class="boton-alineancion inputs-personalizados is-hover" id="boton-alineacion-centro">
                         <i class="fa-solid fa-align-center"></i>
                     </button>
-                    <button class="boton-alineancion inputs-personalizados is-hover">
+                    <button class="boton-alineancion inputs-personalizados is-hover" id="boton-alineacion-derecha">
                         <i class="fa-solid fa-align-right"></i>
                     </button>
                 </div>
@@ -230,13 +234,13 @@
                 CONTORNO
             </h4>
             <div class="contenedor-contorno">
-                <button class="contorno inputs-personalizados is-focus is-hover">
+                <button class="contorno inputs-personalizados is-focus is-hover" id="sin-contorno">
                     Ninguno
                 </button>
-                <button class="contorno inputs-personalizados is-hover">
+                <button class="contorno inputs-personalizados is-hover" id="contorno-claro">
                     Claro
                 </button>
-                <button class="contorno inputs-personalizados is-focus is-hover">
+                <button class="contorno inputs-personalizados is-focus is-hover" id="contorno-oscuro">
                     Oscuro
                 </button>
             </div>
@@ -251,7 +255,7 @@
             <h4>
                 INTERLINEADO
             </h4>
-            <select name="" id="" class="interlineado inputs-personalizados is-focus is-hover">
+            <select name="" id="interlineado" class="interlineado inputs-personalizados is-focus is-hover">
                 <option value="">0.8</option>
                 <option value="">1</option>
                 <option value="" selected>1.2</option>

@@ -8,7 +8,8 @@
 
 /* HEADER */
 
-header {
+
+.header-oscuro {
     background-color: #371B58;
 }
 
@@ -59,7 +60,9 @@ header {
     align-items: center;
 }
 
-main {
+
+
+.main-oscuro {
     background-color: #4C3575;
     height: calc(100vh - 111px);
 }
@@ -96,6 +99,7 @@ main {
 
 /* PERSONALIZACION IMAGEN*/
 /* POSICION ABSOLUTA*/
+
 .is-absolute {
     position: absolute;
     top: 0;
@@ -187,8 +191,8 @@ input[type=color]::-webkit-color-swatch {
 
 /* TEXTO */
 /*todavia no sé como poner uno "encima" del otro con js*/
-.temporal {
-    left: 0;
+.oculto {
+    display: none;
 }
 
 .personalizacion-texto {
@@ -278,6 +282,27 @@ input[type=color]::-webkit-color-swatch {
     padding: 11px;
     cursor: default;
 }
+
+/* MODO CLARO */
+
+.header-claro {
+    background-color: #BE9FE1;
+}
+
+
+.main-claro {
+    background-color: #F1F1F6;
+}
+
+.apartado-claro {
+    background-color: #C9B6E4;
+}
+
+.input-claro {
+    background-color: #E1CCEC;
+}
+
+/* ##################### RESPONSIVE ######################## */
 
 /* ----- MOBILE ----- */
 
