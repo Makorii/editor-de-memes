@@ -119,6 +119,14 @@
     padding: 20px;
 }
 
+.boton-responsive {
+    background-color: #5B4B8A;
+    position: absolute;
+    right: 0;
+    margin: 0 10px;
+    display: none;
+}
+
 .apartado-titulo{
     font-size: 1.5rem;
     text-align: center;
@@ -349,9 +357,10 @@ input[type=color]::-webkit-color-swatch {
         display: none;
     }
 
-    /* PERSONALIZACION DE MEMES */
+    /* IMAGEN MEME */
     .tarjeta-meme {
         width: 90%;
+        height: 400px;
     }
 
     .texto-meme {
@@ -359,12 +368,15 @@ input[type=color]::-webkit-color-swatch {
         padding: 5px;
     }
 
-    .imagen-meme {
-        height: 200px;
-    }
-
     .boton-descargar {
         font-size: 1.2rem;
     }
+    /* PERSONALIZACION IMAGEN*/
+    .apartado {
+        width: 100vw;
+    }
 
+    .boton-responsive {
+        display: inline-block;
+    }
 }
