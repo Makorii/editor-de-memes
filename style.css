@@ -33,6 +33,7 @@
     cursor: pointer;
     background-color: #7858A6;
     color: white;
+    transition: background-color 0.2s;
 }
 /* FOCUS & HOVER */
 .is-focus:focus, .is-hover:hover {
@@ -42,6 +43,7 @@
 .opcion-de-personalizacion {
     background-color: #371B58;
     border: none;
+    border-radius: 3px;
     cursor: pointer;
     margin: 10px;
     color: white;
@@ -60,31 +62,34 @@
     align-items: center;
 }
 
-
-
 .main-oscuro {
     background-color: #4C3575;
     height: calc(100vh - 122px);
+    justify-content: center;
 }
 
 .tarjeta-meme {
-    margin: 70px 0;
-    width: 31%;
-    background-color: black;
+    width: 620px;
+    height: 620px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
+    background-color: black;
+    margin-bottom: 25px;
 }
 
 .texto-meme {
     font-size: 2.1rem;
     font-weight: 900;
     background-color: white;
-    padding: 30px;
+    padding: 20px;
+    height: 15%;
 }
 
 .imagen-meme {
-    height: 350px;
+    width: 100%;
+    height: 70%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .boton-descargar {
@@ -189,8 +194,8 @@ input[type=color]::-webkit-color-swatch {
 }
 
 
-/* TEXTO */
-/*todavia no sé como poner uno "encima" del otro con js*/
+/* PERSONALIZACION TEXTO */
+
 .oculto {
     display: none;
 }
@@ -199,6 +204,7 @@ input[type=color]::-webkit-color-swatch {
     resize: vertical;
     width: 100%;
     cursor: text;
+    padding: 8px;
 }
 
 .opcion-diferente {
@@ -225,13 +231,14 @@ input[type=color]::-webkit-color-swatch {
 .numero-fuente {
     width: 50%;
     cursor: text;
+    padding: 8px;
 }
 
 .alineacion-fuente {
     display: flex;
     justify-content: space-between;
     width: 50%;
-    margin-left: 5.2px;
+    margin-left: 8px;
 }
 
 .boton-alineancion {
@@ -252,13 +259,23 @@ input[type=color]::-webkit-color-swatch {
     background-color: white;
 }
 
-.contenedor-fondo {
+.contenedor-fila {
     display: flex;
+}
+
+.fondo {
+    align-items: flex-start;
+    width: 50%;
 }
 
 .texto-fondo, .texto-color {
     width: 25px;
     height: 27px;
+    margin-right: 5px;
+}
+
+.contenedor-texto-color {
+    width: 95%;
 }
 
 .contenedor-contorno {
@@ -290,7 +307,7 @@ input[type=color]::-webkit-color-swatch {
 
 
 .main-claro {
-    background-color: #F1F1F6;
+    background-color: #e3ddeb;
 }
 
 .apartado-claro {
@@ -304,6 +321,11 @@ input[type=color]::-webkit-color-swatch {
 .texto-claro {
     color: #371B58;
 }
+
+.range-claro::-webkit-slider-thumb {
+    background-color: #371B58;
+}
+
 
 /* ##################### RESPONSIVE ######################## */
 

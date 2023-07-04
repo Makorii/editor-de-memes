@@ -12,12 +12,13 @@ botonImagen.addEventListener("click", () => {
     apartadoTexto.style.display = "none";
 })
 
+// ############# MODO OSCURO/ MODO CLARO #############
+
 const botonModoClaro = document.getElementById("modo-claro");
 const botonModoOscuro = document.getElementById("modo-oscuro");
 const header = document.getElementById("header");
 const main = document.getElementById("main");
 const inputs = document.getElementsByTagName("input");
-// console.log(inputs); PREGUNTAR COMO PUEDO TRAER TODOS LOS ELEMENTOS DE UN ARRAY.
 const contendorFondoImg = document.getElementById("contenedor-fondo-img");
 const fondoOpciones = document.getElementById("fondo-opciones");
 const botonRestaurar = document.getElementById("boton-restaurar");
@@ -27,9 +28,15 @@ const fuenteOpciones = document.getElementById("fuente-opciones");
 const botonIzquierda = document.getElementById("boton-alineacion-izquierda");
 const botonCentro = document.getElementById("boton-alineacion-centro");
 const botonDerecha = document.getElementById("boton-alineacion-derecha");
+const iconoIzq = document.getElementById("icono-izquierda");
+const iconoCentro = document.getElementById("icono-centro");
+const iconoDer = document.getElementById("icono-derecha");
+const textoFondo = document.getElementById("contenedor-texto-fondo");
+const textoColor = document.getElementById("contenedor-texto-color");
 const botonSinCortorno = document.getElementById("sin-contorno");
 const botonContornoClaro = document.getElementById("contorno-claro");
 const botonContornoOscuro = document.getElementById("contorno-oscuro");
+const espaciado = document.getElementById("espaciado");
 const interlineado = document.getElementById("interlineado");
 const tituloHeader = document.getElementById("titulo-header");
 
@@ -41,20 +48,22 @@ botonModoOscuro.addEventListener("click", () => {
     tituloHeader.classList.add("texto-claro");
     main.classList.add("main-claro");
     apartadoImagen.classList.add("apartado-claro");
+    apartadoImagen.classList.add("texto-claro");
     apartadoTexto.classList.add("apartado-claro");
-    inputs[0].classList.add("input-claro");
+    apartadoTexto.classList.add("texto-claro");
+    inputs[0].classList.add("input-claro", "texto-claro");
     inputs[1].classList.add("input-claro");
     contendorFondoImg.classList.add("input-claro");
-    inputs[2].classList.add("input-claro");
-    inputs[3].classList.add("input-claro");
-    inputs[4].classList.add("input-claro");
-    inputs[5].classList.add("input-claro");
-    inputs[6].classList.add("input-claro");
-    inputs[7].classList.add("input-claro");
-    inputs[8].classList.add("input-claro");
-    inputs[9].classList.add("input-claro");
-    inputs[10].classList.add("input-claro");
-    inputs[11].classList.add("input-claro");
+    inputs[2].classList.add("input-claro", "range-claro");
+    inputs[3].classList.add("input-claro", "range-claro");
+    inputs[4].classList.add("input-claro", "range-claro");
+    inputs[5].classList.add("input-claro", "range-claro");
+    inputs[6].classList.add("input-claro", "range-claro");
+    inputs[7].classList.add("input-claro", "range-claro");
+    inputs[8].classList.add("input-claro", "range-claro");
+    inputs[9].classList.add("input-claro", "range-claro");
+    inputs[10].classList.add("input-claro", "range-claro");
+    inputs[11].classList.add("input-claro", "range-claro");
     inputs[12].classList.add("input-claro");
     inputs[13].classList.add("input-claro");
     inputs[14].classList.add("input-claro");
@@ -62,20 +71,30 @@ botonModoOscuro.addEventListener("click", () => {
     inputs[16].classList.add("input-claro");
     inputs[17].classList.add("input-claro");
     botonImagen.classList.add("header-claro");
+    botonImagen.classList.add("texto-claro");
     botonTexto.classList.add("header-claro");
+    botonTexto.classList.add("texto-claro");
     botonModoClaro.classList.add("header-claro");
-    fondoOpciones.classList.add("input-claro");
-    botonRestaurar.classList.add("input-claro");
-    textoSuperior.classList.add("input-claro");
-    textoInferior.classList.add("input-claro"); 
-    fuenteOpciones.classList.add("input-claro");
+    botonModoClaro.classList.add("texto-claro");
+    fondoOpciones.classList.add("input-claro", "texto-claro");
+    botonRestaurar.classList.add("input-claro", "texto-claro");
+    textoSuperior.classList.add("input-claro", "texto-claro");
+    textoInferior.classList.add("input-claro", "texto-claro"); 
+    fuenteOpciones.classList.add("input-claro", "texto-claro");
+    tamanioFuente.classList.add("texto-claro");
     botonIzquierda.classList.add("input-claro");
     botonCentro.classList.add("input-claro");
     botonDerecha.classList.add("input-claro");
-    botonSinCortorno.classList.add("input-claro");
-    botonContornoClaro.classList.add("input-claro");
-    botonContornoOscuro.classList.add("input-claro");
-    interlineado.classList.add("input-claro");
+    iconoIzq.classList.add("texto-claro");
+    iconoCentro.classList.add("texto-claro");
+    iconoDer.classList.add("texto-claro");
+    textoFondo.classList.add("input-claro");
+    textoColor.classList.add("input-claro");
+    botonSinCortorno.classList.add("input-claro", "texto-claro");
+    botonContornoClaro.classList.add("input-claro", "texto-claro");
+    botonContornoOscuro.classList.add("input-claro", "texto-claro");
+    espaciado.classList.add("texto-claro");
+    interlineado.classList.add("input-claro", "texto-claro");
 })
 
 botonModoClaro.addEventListener("click", () => {
@@ -85,20 +104,22 @@ botonModoClaro.addEventListener("click", () => {
     tituloHeader.classList.remove("texto-claro");
     main.classList.remove("main-claro");
     apartadoImagen.classList.remove("apartado-claro");
+    apartadoImagen.classList.remove("texto-claro");
     apartadoTexto.classList.remove("apartado-claro");
+    apartadoTexto.classList.remove("texto-claro");
     inputs[0].classList.remove("input-claro");
     inputs[1].classList.remove("input-claro");
     contendorFondoImg.classList.remove("input-claro");
-    inputs[2].classList.remove("input-claro");
-    inputs[3].classList.remove("input-claro");
-    inputs[4].classList.remove("input-claro");
-    inputs[5].classList.remove("input-claro");
-    inputs[6].classList.remove("input-claro");
-    inputs[7].classList.remove("input-claro");
-    inputs[8].classList.remove("input-claro");
-    inputs[9].classList.remove("input-claro");
-    inputs[10].classList.remove("input-claro");
-    inputs[11].classList.remove("input-claro");
+    inputs[2].classList.remove("input-claro", "range-claro");
+    inputs[3].classList.remove("input-claro", "range-claro");
+    inputs[4].classList.remove("input-claro", "range-claro");
+    inputs[5].classList.remove("input-claro", "range-claro");
+    inputs[6].classList.remove("input-claro", "range-claro");
+    inputs[7].classList.remove("input-claro", "range-claro");
+    inputs[8].classList.remove("input-claro", "range-claro");
+    inputs[9].classList.remove("input-claro", "range-claro");
+    inputs[10].classList.remove("input-claro", "range-claro");
+    inputs[11].classList.remove("input-claro", "range-claro");
     inputs[12].classList.remove("input-claro");
     inputs[13].classList.remove("input-claro");
     inputs[14].classList.remove("input-claro");
@@ -106,91 +127,106 @@ botonModoClaro.addEventListener("click", () => {
     inputs[16].classList.remove("input-claro");
     inputs[17].classList.remove("input-claro");
     botonImagen.classList.remove("header-claro");
+    botonImagen.classList.remove("texto-claro");
     botonTexto.classList.remove("header-claro");
-    fondoOpciones.classList.remove("input-claro");
-    botonRestaurar.classList.remove("input-claro");
-    textoSuperior.classList.remove("input-claro");
-    textoInferior.classList.remove("input-claro"); 
-    fuenteOpciones.classList.remove("input-claro");
+    botonTexto.classList.remove("texto-claro");
+    fondoOpciones.classList.remove("input-claro", "texto-claro");
+    botonRestaurar.classList.remove("input-claro", "texto-claro");
+    textoSuperior.classList.remove("input-claro", "texto-claro");
+    textoInferior.classList.remove("input-claro", "texto-claro"); 
+    fuenteOpciones.classList.remove("input-claro" , "texto-claro");
+    tamanioFuente.classList.remove("texto-claro");
     botonIzquierda.classList.remove("input-claro");
     botonCentro.classList.remove("input-claro");
     botonDerecha.classList.remove("input-claro");
-    botonSinCortorno.classList.remove("input-claro");
-    botonContornoClaro.classList.remove("input-claro");
-    botonContornoOscuro.classList.remove("input-claro");
-    interlineado.classList.remove("input-claro");
+    iconoIzq.classList.remove("texto-claro");
+    iconoCentro.classList.remove("texto-claro");
+    iconoDer.classList.remove("texto-claro");
+    textoFondo.classList.remove("input-claro");
+    textoColor.classList.remove("input-claro");
+    botonSinCortorno.classList.remove("input-claro", "texto-claro");
+    botonContornoClaro.classList.remove("input-claro", "texto-claro");
+    botonContornoOscuro.classList.remove("input-claro", "texto-claro");
+    espaciado.classList.remove("texto-claro");
+    interlineado.classList.remove("input-claro", "texto-claro");
 })
+
+// ############# IMAGEN MEME #############
 
 const urlImagen = document.getElementById("url-imagen");
 const imagenMeme = document.getElementById("contenedor-imagen-meme");
 
 urlImagen.addEventListener("input", () => {
     imagenMeme.style.backgroundImage = `url("${urlImagen.value}")`;
-    imagenMeme.style.backgroundPosition = "top";
-    imagenMeme.style.backgroundSize = "cover";
-    imagenMeme.style.backgroundRepeat = "no-repeat";
 })
 
+fondoOpciones.addEventListener("change", () => {
+    imagenMeme.style.backgroundBlendMode = `${fondoOpciones.value}`;
+})
+
+// #################### FONDO IMAGEN MEME #################
 
 const colorFondoMeme = document.getElementById("color-fondo-meme");
+const nombreHexadecimal = document.getElementById("hexadecimal");
 
 colorFondoMeme.addEventListener("input", () => {
     imagenMeme.style.backgroundColor = `${colorFondoMeme.value}`;
+    nombreHexadecimal.innerHTML = `${colorFondoMeme.value}`.toUpperCase();
 })
 
-//PREGUNTAR COMO HACER EL SELECT FONDO OPCIONES
+// ################# FILTROS MEME #####################
 
 const brillo = document.querySelector("#brillo");
 
-brillo.addEventListener("click", () => {
+brillo.addEventListener("change", () => {
     imagenMeme.style.filter = `brightness(${brillo.value})`;
 })
 
 const opacidad = document.querySelector("#opacidad");
 
-opacidad.addEventListener("click", () => {
+opacidad.addEventListener("change", () => {
     imagenMeme.style.filter = `opacity(${opacidad.value})`;
 });
 
 const contraste = document.querySelector("#contraste");
 
-contraste.addEventListener("click", () => {
+contraste.addEventListener("change", () => {
     imagenMeme.style.filter = `contrast(${contraste.value})`;
 });
 
 const desenfoque = document.querySelector("#desenfoque");
 
-desenfoque.addEventListener("click", () => {
+desenfoque.addEventListener("change", () => {
     imagenMeme.style.filter = `blur(${desenfoque.value}px)`;
 });
 
 const escalaDeGrises = document.querySelector("#escala-grises");
 
-escalaDeGrises.addEventListener("click", () => {
+escalaDeGrises.addEventListener("change", () => {
     imagenMeme.style.filter = `grayscale(${escalaDeGrises.value})`;
 });
 
 const sepia = document.querySelector("#sepia");
 
-sepia.addEventListener("click", () => {
+sepia.addEventListener("change", () => {
     imagenMeme.style.filter = `sepia(${sepia.value})`;
 });
 
 const hue = document.querySelector("#hue");
 
-hue.addEventListener("click", () => {
+hue.addEventListener("change", () => {
     imagenMeme.style.filter = `hue-rotate(${hue.value}deg)`;
 });
 
 const saturacion = document.querySelector("#saturacion");
 
-saturacion.addEventListener("click", () => {
+saturacion.addEventListener("change", () => {
     imagenMeme.style.filter = `saturate(${saturacion.value})`;
 });
 
 const negativo = document.querySelector("#negativo");
 
-negativo.addEventListener("click", () => {
+negativo.addEventListener("change", () => {
     imagenMeme.style.filter = `invert(${negativo.value})`;
 });
 
@@ -215,6 +251,16 @@ textoSuperior.addEventListener("input", () => {
 })
 
 const sinTextoSuperior = document.querySelector("#sin-texto-sup");
+const sinTextoInferior = document.querySelector("#sin-texto-inf");
+//PREGUNTAR COMO OCULTAR EL TOP Y EL BOTOM TEXT
+
+const ocultarTextos = () => {
+    if(sinTextoSuperior.checked && sinTextoSuperior.checked) {
+        contenedorTextoSuperior.style.display = 'none';
+        contenedorTextoInferior.style.display = 'none';
+        imagenMeme.style.height = "100%";
+    }
+}
 
 
 const contenedorTextoInferior = document.querySelector("#texto-abajo");
@@ -225,6 +271,7 @@ textoInferior.addEventListener("input", () => {
 
 contenedorTextoSuperior.style.fontFamily = "Impact";
 contenedorTextoInferior.style.fontFamily = "Impact";
+
 
 fuenteOpciones.addEventListener("change", () => {
     contenedorTextoSuperior.style.fontFamily = `${fuenteOpciones.value}`;
@@ -260,17 +307,21 @@ botonDerecha.addEventListener("click", () => {
 });
 
 const fondoTexto = document.getElementById("fondo-texto");
+const hexadecimalFondoTexto = document.getElementById("hexadecimal-fondo-texto");
 
 fondoTexto.addEventListener("input", () => {
     contenedorTextoSuperior.style.backgroundColor = `${fondoTexto.value}`;
     contenedorTextoInferior.style.backgroundColor = `${fondoTexto.value}`;
+    hexadecimalFondoTexto.innerHTML = `${fondoTexto.value}`.toUpperCase();
 })
 
 const colorTexto = document.getElementById("color-texto");
+const hexadecimalColorTexto = document.getElementById("hexadecimal-color-texto");
 
 colorTexto.addEventListener("input", () => {
     contenedorTextoSuperior.style.color = `${colorTexto.value}`;
     contenedorTextoInferior.style.color = `${colorTexto.value}`;
+    hexadecimalColorTexto.innerHTML = `${colorTexto.value}`.toUpperCase();
 })
 
 botonSinCortorno.addEventListener("click", () => {
@@ -308,3 +359,4 @@ interlineado.addEventListener("change", () => {
 //   border-radius: 50%;
 //   background-color: transparent;
 // }    (color-choice es el nombre de mi clase)
+

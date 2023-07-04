@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c99d9e0ff9.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Editor de memes</title>
 </head>
+
 <body>
     <header class="header-oscuro" id="header">
         <div class="contenedor-header">
@@ -36,15 +39,16 @@
     </header>
     <!-- PERSONALIZACION DE MEMES -->
     <main class="contenedor-flexible main-oscuro" id="main">
-        <article class="tarjeta-meme">
+        <div class="tarjeta-meme">
             <h2 id="texto-arriba" class="texto-meme">
                 TOP TEXT
             </h2>
-            <div class="imagen-meme" id="contenedor-imagen-meme"> </div>
+            <div class="imagen-meme" id="contenedor-imagen-meme">
+            </div>
             <h2 class="texto-meme" id="texto-abajo">
                 BOTTOM TEXT
             </h2>
-        </article>
+        </div>
         <button class="boton-descargar">
             <i class="fa-solid fa-download"></i>
             Descargar meme
@@ -67,18 +71,18 @@
             </h4>
             <div class="contenedor-fondo-imagen">
                 <div class="contenedor-color" id="contenedor-fondo-img">
-                    <input type="color" name="" id="color-fondo-meme" class="filtro-color inputs-personalizados">
-                    <p class="color">
+                    <input type="color" name="" id="color-fondo-meme" class="filtro-color inputs-personalizados" value="#FFFFFF">
+                    <p class="color" id="hexadecimal">
                         #FFFFFF
                     </p>
                 </div>
                 <select name="" id="fondo-opciones" class="filtro-opciones inputs-personalizados is-focus is-hover">
-                    <option value="Ninguno">Ninguno</option>
-                    <option value="Aclarar">Aclarar</option>
-                    <option value="Oscurecer">Oscurecer</option>
-                    <option value="Diferencia">Diferencia</option>
-                    <option value="Luminosida">Luminosidad</option>
-                    <option value="Multiplica">Multiplicar</option>
+                    <option value="unset">Ninguno</option>
+                    <option value="lighten">Aclarar</option>
+                    <option value="darken">Oscurecer</option>
+                    <option value="difference">Diferencia</option>
+                    <option value="luminosity">Luminosidad</option>
+                    <option value="multiply">Multiplicar</option>
                 </select>
             </div>
         </div>
@@ -90,55 +94,64 @@
                 <label for="brillo">
                     BRILLO
                 </label>
-                <input type="range" name="" id="brillo" class="rango-filtro inputs-personalizados is-focus" value="1" min="0" max="1" step="0.1">
+                <input type="range" name="" id="brillo" class="rango-filtro inputs-personalizados is-focus" value="1"
+                    min="0" max="1" step="0.1">
             </div>
             <div class="filtros">
                 <label for="opacidad">
                     OPACIDAD
                 </label>
-                <input type="range" name="" id="opacidad" class="rango-filtro inputs-personalizados is-focus" value="1" min="0" max="1" step="0.1">
+                <input type="range" name="" id="opacidad" class="rango-filtro inputs-personalizados is-focus" value="1"
+                    min="0" max="1" step="0.1">
             </div>
             <div class="filtros">
                 <label for="contraste">
                     CONTRASTE
                 </label>
-                <input type="range" name="" id="contraste" class="rango-filtro inputs-personalizados is-focus" value="1" min="1" max="10" step="0.1">
+                <input type="range" name="" id="contraste" class="rango-filtro inputs-personalizados is-focus" value="1"
+                    min="1" max="10" step="0.1">
             </div>
             <div class="filtros">
                 <label for="desenfoque">
                     DESENFOQUE
                 </label>
-                <input type="range" name="" id="desenfoque" class="rango-filtro inputs-personalizados is-focus" value="0" min="0" max="10" step="0.1">
+                <input type="range" name="" id="desenfoque" class="rango-filtro inputs-personalizados is-focus"
+                    value="0" min="0" max="10" step="0.1">
             </div>
             <div class="filtros">
                 <label for="escala-grises">
                     ESCALA DE GRISES
                 </label>
-                <input type="range" name="" id="escala-grises" class="rango-filtro inputs-personalizados is-focus" value="0" min="0" max="1" step="0.1">
+                <input type="range" name="" id="escala-grises" class="rango-filtro inputs-personalizados is-focus"
+                    value="0" min="0" max="1" step="0.1">
             </div>
             <div class="filtros">
                 <label for="sepia">
                     SEPIA
                 </label>
-                <input type="range" name="" id="sepia" class="rango-filtro inputs-personalizados is-focus" value="0" min="0" max="1" step="0.1">
+                <input type="range" name="" id="sepia" class="rango-filtro inputs-personalizados is-focus" value="0"
+                    min="0" max="1" step="0.1">
             </div>
             <div class="filtros">
                 <label for="hue">
                     HUE
                 </label>
-                <input type="range" name="" id="hue" class="rango-filtro inputs-personalizados is-focus" value="0" min="0" max="360">
+                <input type="range" name="" id="hue" class="rango-filtro inputs-personalizados is-focus" value="0"
+                    min="0" max="360">
             </div>
             <div class="filtros">
                 <label for="saturacion">
                     SATURADO
                 </label>
-                <input type="range" name="" id="saturacion" class="rango-filtro inputs-personalizados is-focus" value="1" min="1" max="10" step="0.1">
+                <input type="range" name="" id="saturacion" class="rango-filtro inputs-personalizados is-focus"
+                    value="1" min="1" max="10" step="0.1">
             </div>
             <div class="filtros">
                 <label for="negativo">
                     NEGATIVO
                 </label>
-                <input type="range" name="" id="negativo" class="rango-filtro inputs-personalizados is-focus" value="0" min="0" max="1" step="0.1">
+                <input type="range" name="" id="negativo" class="rango-filtro inputs-personalizados is-focus" value="0"
+                    min="0" max="1" step="0.1">
             </div>
         </div>
         <button class="restaurar-filtros inputs-personalizados is-focus is-hover" type="reset" id="boton-restaurar">
@@ -154,7 +167,8 @@
             <h4>
                 SUPERIOR
             </h4>
-            <textarea name="" id="texto-superior" class="inputs-personalizados personalizacion-texto is-focus is-hover" value="TOP TEXT">TOP TEXT</textarea>
+            <textarea name="" id="texto-superior" class="inputs-personalizados personalizacion-texto is-focus is-hover"
+                value="TOP TEXT">TOP TEXT</textarea>
         </div>
         <div class="contenedor-sin">
             <input type="checkbox" name="" id="sin-texto-sup">
@@ -164,18 +178,19 @@
             <h4>
                 INFERIOR
             </h4>
-            <textarea name="" id="texto-inferior" class="inputs-personalizados personalizacion-texto is-focus is-hover">BOTTOM TEXT</textarea>
-            
+            <textarea name="" id="texto-inferior"
+                class="inputs-personalizados personalizacion-texto is-focus is-hover">BOTTOM TEXT</textarea>
         </div>
         <div class="contenedor-sin">
-            <input type="checkbox" name="" id="">
+            <input type="checkbox" name="" id="sin-texto-inf">
             <label for="" class="opcion-diferente">Sin texto inferior</label>
         </div>
         <div>
             <h4>
                 FUENTE
             </h4>
-            <select name="" id="fuente-opciones" class="filtro-opciones opciones-fuentes inputs-personalizados is-focus is-hover">
+            <select name="" id="fuente-opciones"
+                class="filtro-opciones opciones-fuentes inputs-personalizados is-focus is-hover">
                 <option value="Arial">Arial</option>
                 <option value="Arial Black">Arial Black</option>
                 <option value="American Typewrite">American Typewriter</option>
@@ -187,40 +202,40 @@
                 <option value="Time New Roman">Time New Roman</option>
             </select>
             <div class="contenedor-fuente">
-                <input type="number" name="" id="tamanio-fuente" class="numero-fuente inputs-personalizados is-focus is-hover" value="40">
+                <input type="number" name="" id="tamanio-fuente"
+                    class="numero-fuente inputs-personalizados is-focus is-hover" value="40">
                 <div class="alineacion-fuente">
                     <button class="boton-alineancion inputs-personalizados is-hover" id="boton-alineacion-izquierda">
-                        <i class="fa-solid fa-align-left"></i>
+                        <i class="fa-solid fa-align-left" id="icono-izquierda"></i>
                     </button>
                     <button class="boton-alineancion inputs-personalizados is-hover" id="boton-alineacion-centro">
-                        <i class="fa-solid fa-align-center"></i>
+                        <i class="fa-solid fa-align-center" id="icono-centro"></i>
                     </button>
                     <button class="boton-alineancion inputs-personalizados is-hover" id="boton-alineacion-derecha">
-                        <i class="fa-solid fa-align-right"></i>
+                        <i class="fa-solid fa-align-right" id="icono-derecha"></i>
                     </button>
                 </div>
-                
+
             </div>
         </div>
-        <div class="contenedor-fondo">
-            <div>
-                <h4>
-                    FONDO
-                </h4>
-                <div>
-                    <input type="color" name="" id="fondo-texto" class="texto-fondo inputs-personalizados">
-                    <span class="color">#000000</span>
-                </div>
-            </div>
-            <div>
+        <div class="contenedor-fila">
+            <div class="contenedor-flexible fondo">
                 <h4>
                     COLOR
                 </h4>
-                <div>
-                    <input type="color" name="" id="color-texto" class="texto-color inputs-personalizados">
-                    <span class="color">#FFFFFF</span>
+                <div class="contenedor-color contenedor-texto-color" id="contenedor-texto-color">
+                    <input type="color" name="" id="color-texto" class="texto-color inputs-personalizados" value="#000000">
+                    <p class="color" id="hexadecimal-color-texto">#000000</p>
                 </div>
-                
+            </div>
+            <div class="contenedor-flexible fondo">
+                <h4>
+                    FONDO
+                </h4>
+                <div class="contenedor-color contenedor-texto-color" id="contenedor-texto-fondo">
+                    <input type="color" name="" id="fondo-texto" class="texto-fondo inputs-personalizados" value="#FFFFFF">
+                    <p class="color" id="hexadecimal-fondo-texto">#FFFFFF</p>
+                </div>
             </div>
         </div>
         <div class="contenedor-sin">
@@ -247,7 +262,8 @@
             <h4>
                 ESPACIADO
             </h4>
-            <input type="number" name="" id="" class="espaciado inputs-personalizados is-focus is-hover" value="35">
+            <input type="number" name="" id="espaciado" class="espaciado inputs-personalizados is-focus is-hover"
+                value="35" min="10" max="50">
         </div>
         <div>
             <h4>
@@ -265,4 +281,5 @@
     </aside>
     <script src="index.js"></script>
 </body>
+
 </html>
