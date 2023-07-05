@@ -2,6 +2,8 @@ const apartadoTexto = document.getElementById("apartado-texto");
 const apartadoImagen = document.getElementById("apartado-imagen");
 const botonTexto = document.getElementById("boton-texto");
 const botonImagen = document.getElementById("boton-imagen");
+const botonCerrarImagen = document.getElementById("boton-apartado-imagen");
+const botonCerrarTexto = document.getElementById("boton-apartado-texto");
 
 botonTexto.addEventListener("click", () => {
     apartadoTexto.style.display = "block";
@@ -11,6 +13,14 @@ botonImagen.addEventListener("click", () => {
     apartadoImagen.style.display = "block";
     apartadoTexto.style.display = "none";
 })
+
+botonCerrarImagen.addEventListener("click", () => {
+    apartadoImagen.style.display = "none";
+});
+
+botonCerrarTexto.addEventListener("click", () => {
+    apartadoTexto.style.display = "none";
+});
 
 // ############# MODO OSCURO/ MODO CLARO #############
 
@@ -51,6 +61,8 @@ botonModoOscuro.addEventListener("click", () => {
     apartadoImagen.classList.add("texto-claro");
     apartadoTexto.classList.add("apartado-claro");
     apartadoTexto.classList.add("texto-claro");
+    botonCerrarImagen.classList.add("apartado-claro");
+    botonCerrarTexto.classList.add("apartado-claro");
     inputs[0].classList.add("input-claro", "texto-claro");
     inputs[1].classList.add("input-claro");
     contendorFondoImg.classList.add("input-claro");
@@ -107,6 +119,8 @@ botonModoClaro.addEventListener("click", () => {
     apartadoImagen.classList.remove("texto-claro");
     apartadoTexto.classList.remove("apartado-claro");
     apartadoTexto.classList.remove("texto-claro");
+    botonCerrarImagen.classList.remove("apartado-claro");
+    botonCerrarTexto.classList.remove("apartado-claro");
     inputs[0].classList.remove("input-claro");
     inputs[1].classList.remove("input-claro");
     contendorFondoImg.classList.remove("input-claro");
@@ -191,7 +205,7 @@ opacidad.addEventListener("change", () => {
 const contraste = document.querySelector("#contraste");
 
 contraste.addEventListener("change", () => {
-    imagenMeme.style.filter = `contrast(${contraste.value})`;
+    imagenMeme.style.filter = `contrast(${contraste.value}%)`;
 });
 
 const desenfoque = document.querySelector("#desenfoque");
@@ -203,13 +217,13 @@ desenfoque.addEventListener("change", () => {
 const escalaDeGrises = document.querySelector("#escala-grises");
 
 escalaDeGrises.addEventListener("change", () => {
-    imagenMeme.style.filter = `grayscale(${escalaDeGrises.value})`;
+    imagenMeme.style.filter = `grayscale(${escalaDeGrises.value}%)`;
 });
 
 const sepia = document.querySelector("#sepia");
 
 sepia.addEventListener("change", () => {
-    imagenMeme.style.filter = `sepia(${sepia.value})`;
+    imagenMeme.style.filter = `sepia(${sepia.value}%)`;
 });
 
 const hue = document.querySelector("#hue");
@@ -221,7 +235,7 @@ hue.addEventListener("change", () => {
 const saturacion = document.querySelector("#saturacion");
 
 saturacion.addEventListener("change", () => {
-    imagenMeme.style.filter = `saturate(${saturacion.value})`;
+    imagenMeme.style.filter = `saturate(${saturacion.value}%)`;
 });
 
 const negativo = document.querySelector("#negativo");
