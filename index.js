@@ -1,9 +1,8 @@
+// ######## OCUTAR/MOSTRAR APARTADOS IMAGEN Y TEXTO ########
 const apartadoTexto = document.getElementById("apartado-texto");
 const apartadoImagen = document.getElementById("apartado-imagen");
 const botonTexto = document.getElementById("boton-texto");
 const botonImagen = document.getElementById("boton-imagen");
-const botonCerrarImagen = document.getElementById("boton-apartado-imagen");
-const botonCerrarTexto = document.getElementById("boton-apartado-texto");
 
 botonTexto.addEventListener("click", () => {
     apartadoTexto.style.display = "block";
@@ -14,6 +13,9 @@ botonImagen.addEventListener("click", () => {
     apartadoTexto.style.display = "none";
 })
 
+// ####### BOTON CERRAR APARTADOS IMAGEN Y TEXTO ########
+const botonCerrarImagen = document.getElementById("boton-apartado-imagen");
+const botonCerrarTexto = document.getElementById("boton-apartado-texto");
 botonCerrarImagen.addEventListener("click", () => {
     apartadoImagen.style.display = "none";
 });
@@ -165,8 +167,7 @@ botonModoClaro.addEventListener("click", () => {
     interlineado.classList.remove("input-claro", "texto-claro");
 })
 
-// ############# IMAGEN MEME #############
-
+// ############# FONDO IMAGEN MEME #############
 const urlImagen = document.getElementById("url-imagen");
 const imagenMeme = document.getElementById("contenedor-imagen-meme");
 
@@ -174,18 +175,17 @@ urlImagen.addEventListener("input", () => {
     imagenMeme.style.backgroundImage = `url("${urlImagen.value}")`;
 })
 
-fondoOpciones.addEventListener("change", () => {
-    imagenMeme.style.backgroundBlendMode = `${fondoOpciones.value}`;
-})
-
-// #################### FONDO IMAGEN MEME #################
-
+// #################### COLOR DE FONDO IMAGEN MEME #################
 const colorFondoMeme = document.getElementById("color-fondo-meme");
 const nombreHexadecimal = document.getElementById("hexadecimal");
 
 colorFondoMeme.addEventListener("input", () => {
     imagenMeme.style.backgroundColor = `${colorFondoMeme.value}`;
     nombreHexadecimal.innerHTML = `${colorFondoMeme.value}`.toUpperCase();
+})
+
+fondoOpciones.addEventListener("change", () => {
+    imagenMeme.style.backgroundBlendMode = `${fondoOpciones.value}`;
 })
 
 // ################# FILTROS MEME #####################
@@ -243,7 +243,7 @@ const negativo = document.querySelector("#negativo");
 negativo.addEventListener("change", () => {
     imagenMeme.style.filter = `invert(${negativo.value})`;
 });
-
+// ######### BOTON RESTAURAR FILTRO ###########
 botonRestaurar.addEventListener("click", () => {
     imagenMeme.style.filter = `brightness(${brillo.value = 1})`;
     imagenMeme.style.filter = `opacity(${opacidad.value = 1})`;
@@ -256,18 +256,25 @@ botonRestaurar.addEventListener("click", () => {
     imagenMeme.style.filter = `invert(${negativo.value = 0})`;
 });
 
-// ################## APARTADO TEXTO #################
+// ------------------- APARTADO TEXTO ----------------------
 
+// ######## PERSONALIZAR TOP Y BOTTOM TEXT ############
 const contenedorTextoSuperior = document.querySelector("#texto-arriba");
 
 textoSuperior.addEventListener("input", () => {
     contenedorTextoSuperior.innerHTML = `${textoSuperior.value}`;
 })
 
+const contenedorTextoInferior = document.querySelector("#texto-abajo");
+
+textoInferior.addEventListener("input", () => {
+    contenedorTextoInferior.innerHTML = `${textoInferior.value}`;
+});
+
+
+// #######FONDO TRANSPARENTE ###############
 const sinTextoSuperior = document.querySelector("#sin-texto-sup");
 const sinTextoInferior = document.querySelector("#sin-texto-inf");
-
-//FONDO TRANSPARENTE
 
 const ocultarTextos = () => {
     if(sinTextoSuperior.checked && sinTextoInferior.checked) {
@@ -292,18 +299,7 @@ const ocultarTextos = () => {
 sinTextoSuperior.addEventListener('click', () => ocultarTextos());
 sinTextoInferior.addEventListener('click', () => ocultarTextos());
 
-
-
-const contenedorTextoInferior = document.querySelector("#texto-abajo");
-
-textoInferior.addEventListener("input", () => {
-    contenedorTextoInferior.innerHTML = `${textoInferior.value}`;
-});
-
-contenedorTextoSuperior.style.fontFamily = "Impact";
-contenedorTextoInferior.style.fontFamily = "Impact";
-
-
+// ########## CAMBIO DE FUENTE #############
 fuenteOpciones.addEventListener("change", () => {
     contenedorTextoSuperior.style.fontFamily = `${fuenteOpciones.value}`;
 });
@@ -312,6 +308,7 @@ fuenteOpciones.addEventListener("change", () => {
     contenedorTextoInferior.style.fontFamily = `${fuenteOpciones.value}`;
 });
 
+// ############ CAMBIO DEL TAMAÑO DE LA FUENTE #################
 const tamanioFuente = document.querySelector("#tamanio-fuente");
 
 tamanioFuente.addEventListener("change", () => {
@@ -321,6 +318,8 @@ tamanioFuente.addEventListener("change", () => {
 tamanioFuente.addEventListener("change", () => {
     contenedorTextoInferior.style.fontSize = `${tamanioFuente.value}px`;
 });
+
+// ########### ALINEACION DE LOS TEXTOS ########## 
 
 botonIzquierda.addEventListener("click", () => {
     contenedorTextoSuperior.style.textAlign = "left";
@@ -336,6 +335,8 @@ botonDerecha.addEventListener("click", () => {
     contenedorTextoSuperior.style.textAlign = "right";
     contenedorTextoInferior.style.textAlign = "right";
 });
+
+// ########## COLOR DE FONDO DEL TEXTO #############
 
 const fondoTexto = document.getElementById("fondo-texto");
 const hexadecimalFondoTexto = document.getElementById("hexadecimal-fondo-texto");
@@ -355,6 +356,8 @@ colorTexto.addEventListener("input", () => {
     hexadecimalColorTexto.innerHTML = `${colorTexto.value}`.toUpperCase();
 })
 
+// ########### CONTORNO DEL TEXTO ###############
+
 botonSinCortorno.addEventListener("click", () => {
     contenedorTextoSuperior.style.textShadow = "none";
     contenedorTextoInferior.style.textShadow = "none";
@@ -370,12 +373,13 @@ botonContornoOscuro.addEventListener("click", () => {
     contenedorTextoInferior.style.textShadow = "2px 2px black, -2px 2px black, 2px -2px black, -2px -2px black";
 });
 
-
+// ########### INTERLINEADO DEL TEXTO #################
 interlineado.addEventListener("change", () => {
     contenedorTextoSuperior.style.lineHeight = `${interlineado.value}`;
     contenedorTextoInferior.style.lineHeight = `${interlineado.value}`;
 })
 
+// ########### BOTON DESCARGAR ################
 const meme = document.getElementById("meme");
 const botonDescargar = document.getElementById("boton-descargar");
 
@@ -386,24 +390,3 @@ const descargarMeme = () => {
 }
 
 botonDescargar.addEventListener("click", () => descargarMeme());
-
-
-
-
-
-// //.color-choice input[type="color"],
-// input[type="color"]::-webkit-color-swatch-wrapper,
-// input[type="color"]::-webkit-color-swatch {
-//   width: 18px;
-//   height: 18px;
-//   min-width: 18px;
-//   border-radius: 50%;
-//   background-color: transparent;
-// }    (color-choice es el nombre de mi clase)
-
-
-// const downloadMeme = () => {
-    // // domtoimage.toBlob(meme).then(function (blob) {
-    //         window.saveAs(blob, "mi-meme.png");
-//   });
-// };
