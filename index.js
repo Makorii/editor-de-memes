@@ -266,15 +266,45 @@ textoSuperior.addEventListener("input", () => {
 
 const sinTextoSuperior = document.querySelector("#sin-texto-sup");
 const sinTextoInferior = document.querySelector("#sin-texto-inf");
+
 //PREGUNTAR COMO OCULTAR EL TOP Y EL BOTOM TEXT
 
-const ocultarTextos = () => {
-    if(sinTextoSuperior.checked && sinTextoSuperior.checked) {
+const ocultarTextoSuperior = () => {
+    if(sinTextoSuperior.checked) {
         contenedorTextoSuperior.style.display = 'none';
-        contenedorTextoInferior.style.display = 'none';
-        imagenMeme.style.height = "100%";
+        imagenMeme.style.height = '85%';
+    } else {
+        contenedorTextoSuperior.style.display = 'block';
+        imagenMeme.style.height = '70%';
     }
 }
+
+const ocultarTextoInferior = () => {
+    if(sinTextoInferior.checked) {
+        contenedorTextoInferior.style.display = 'none';
+        imagenMeme.style.height = '85%';
+    } else {
+        contenedorTextoInferior.style.display = 'block';
+        imagenMeme.style.height = '70%';
+    }
+}
+
+// const ocultarTextos = () => {
+//     if(sinTextoSuperior.checked && sinTextoInferior.checked) {
+//         contenedorTextoSuperior.style.display = 'none';
+//         contenedorTextoInferior.style.display = 'none';
+//         imagenMeme.style.height = '100%';
+//     } else {
+//         contenedorTextoSuperior.style.display = 'block';
+//         contenedorTextoInferior.style.display = 'block';
+//         imagenMeme.style.height = '70%';
+//     }
+// }
+
+sinTextoSuperior.addEventListener('change', () => ocultarTextoSuperior());
+sinTextoInferior.addEventListener('change', () => ocultarTextoInferior());
+// sinTextoSuperior.addEventListener('change', () => ocultarTextos());
+// sinTextoInferior.addEventListener('change', () => ocultarTextos());
 
 
 const contenedorTextoInferior = document.querySelector("#texto-abajo");
@@ -374,3 +404,7 @@ interlineado.addEventListener("change", () => {
 //   background-color: transparent;
 // }    (color-choice es el nombre de mi clase)
 
+
+/* <script      src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"      integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="      crossorigin="anonymous"      referrerpolicy="no-referrer"    ></script>      <script      src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"      integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="      crossorigin="anonymous"      referrerpolicy="no-referrer"    ></script> */
+
+// const downloadMeme = () => {  domtoimage.toBlob(meme).then(function (blob) {    window.saveAs(blob, "mi-meme.png");  });};
