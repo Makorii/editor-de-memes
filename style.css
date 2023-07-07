@@ -314,11 +314,13 @@ input[type=color]::-webkit-color-swatch {
 .espaciado {
     padding: 11px;
     cursor: text;
+    width: 100%;
 }
 
 .interlineado {
     padding: 11px;
     cursor: default;
+    width: 100%;
 }
 
 /* MODO CLARO */
