@@ -16,6 +16,8 @@ botonImagen.addEventListener("click", () => {
 // ####### BOTON CERRAR APARTADOS IMAGEN Y TEXTO ########
 const botonCerrarImagen = document.getElementById("boton-apartado-imagen");
 const botonCerrarTexto = document.getElementById("boton-apartado-texto");
+const body = document.getElementById("body");
+
 botonCerrarImagen.addEventListener("click", () => {
     apartadoImagen.style.display = "none";
 });
@@ -272,7 +274,7 @@ textoInferior.addEventListener("input", () => {
 });
 
 
-// #######FONDO TRANSPARENTE ###############
+// ####### SIN TOP/BOTTOM TEXT ###############
 const sinTextoSuperior = document.querySelector("#sin-texto-sup");
 const sinTextoInferior = document.querySelector("#sin-texto-inf");
 
@@ -284,15 +286,15 @@ const ocultarTextos = () => {
     } else if(sinTextoSuperior.checked && !sinTextoInferior.checked) {
         contenedorTextoSuperior.style.display = 'none';
         contenedorTextoInferior.style.display = 'block';
-        imagenMeme.style.height = '85%';
+        imagenMeme.style.height = '80%';
     } else if (sinTextoInferior.checked && !sinTextoSuperior.checked) {
         contenedorTextoInferior.style.display = 'none';
         contenedorTextoSuperior.style.display = 'block';
-        imagenMeme.style.height = '85%';
+        imagenMeme.style.height = '80%';
     } else {
         contenedorTextoInferior.style.display = 'block';
         contenedorTextoSuperior.style.display = 'block';
-        imagenMeme.style.height = '70%';
+        imagenMeme.style.height = '60%';
     }
 }
 
@@ -355,6 +357,30 @@ colorTexto.addEventListener("input", () => {
     contenedorTextoInferior.style.color = `${colorTexto.value}`;
     hexadecimalColorTexto.innerHTML = `${colorTexto.value}`.toUpperCase();
 })
+// ########### FONDO TRANSPARENTE ##################
+const fondoTransparente = document.getElementById("fondo-transparente");
+
+const sinFondo = () => {
+    if (fondoTransparente.checked) {
+        contenedorTextoSuperior.style.backgroundColor = "transparent";
+        meme.style.position = "relative";
+        contenedorTextoSuperior.style.position = "absolute";
+        contenedorTextoSuperior.style.top = "0px";
+        meme.style.alignItems = "center";
+        contenedorTextoInferior.style.backgroundColor = "transparent";
+        contenedorTextoInferior.style.position = "absolute";
+        contenedorTextoInferior.style.bottom = "0px";
+        imagenMeme.style.height = "100%";
+    } else if (!fondoTransparente.checked) {
+        meme.style.alignItems = "stretch";
+        contenedorTextoSuperior.style.position = "static";
+        contenedorTextoInferior.style.position = "static";
+        contenedorTextoSuperior.style.backgroundColor = `${fondoTexto.value}`;
+        contenedorTextoInferior.style.backgroundColor = `${fondoTexto.value}`;
+    }
+}
+
+fondoTransparente.addEventListener("click", () => sinFondo());
 
 // ########### CONTORNO DEL TEXTO ###############
 
@@ -372,6 +398,13 @@ botonContornoOscuro.addEventListener("click", () => {
     contenedorTextoSuperior.style.textShadow = "2px 2px black, -2px 2px black, 2px -2px black, -2px -2px black";
     contenedorTextoInferior.style.textShadow = "2px 2px black, -2px 2px black, 2px -2px black, -2px -2px black";
 });
+
+// ######### ESPACIADO DEL TEXTO ###########
+espaciado.addEventListener ("change", () => {
+    contenedorTextoSuperior.style.padding = `${espaciado.value}px 20px`;
+    contenedorTextoInferior.style.padding = `${espaciado.value}px 20px`;
+    // imagenMeme.style.height = "100%";
+})
 
 // ########### INTERLINEADO DEL TEXTO #################
 interlineado.addEventListener("change", () => {
