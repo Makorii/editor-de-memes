@@ -116,6 +116,9 @@ body {
     background-color: #1a641d;
 }
 
+.boton-descargar:focus {
+    background-color: #1a641d;
+}
 
 /* PERSONALIZACION IMAGEN*/
 /* POSICION ABSOLUTA*/
@@ -393,6 +396,7 @@ input[type=color]::-webkit-color-swatch {
     .boton-descargar {
         font-size: 1.2rem;
     }
+
     /* PERSONALIZACION IMAGEN*/
     .apartado {
         display: none;
@@ -583,14 +587,3 @@ input[type=color]::-webkit-color-swatch {
         width: 260px;
     }
 }
-
-
-/* // //.color-choice input[type="color"],
-// input[type="color"]::-webkit-color-swatch-wrapper,
-// input[type="color"]::-webkit-color-swatch {
-//   width: 18px;
-//   height: 18px;
-//   min-width: 18px;
-//   border-radius: 50%;
-//   background-color: transparent;
-// }    (color-choice es el nombre de mi clase) */
