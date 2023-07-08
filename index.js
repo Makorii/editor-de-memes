@@ -191,60 +191,30 @@ fondoOpciones.addEventListener("change", () => {
 })
 
 // ################# FILTROS MEME #####################
-
 const brillo = document.querySelector("#brillo");
-
-brillo.addEventListener("change", () => {
-    imagenMeme.style.filter = `brightness(${brillo.value})`;
-})
-
 const opacidad = document.querySelector("#opacidad");
-
-opacidad.addEventListener("change", () => {
-    imagenMeme.style.filter = `opacity(${opacidad.value})`;
-});
-
 const contraste = document.querySelector("#contraste");
-
-contraste.addEventListener("change", () => {
-    imagenMeme.style.filter = `contrast(${contraste.value}%)`;
-});
-
 const desenfoque = document.querySelector("#desenfoque");
-
-desenfoque.addEventListener("change", () => {
-    imagenMeme.style.filter = `blur(${desenfoque.value}px)`;
-});
-
 const escalaDeGrises = document.querySelector("#escala-grises");
-
-escalaDeGrises.addEventListener("change", () => {
-    imagenMeme.style.filter = `grayscale(${escalaDeGrises.value}%)`;
-});
-
 const sepia = document.querySelector("#sepia");
-
-sepia.addEventListener("change", () => {
-    imagenMeme.style.filter = `sepia(${sepia.value}%)`;
-});
-
 const hue = document.querySelector("#hue");
-
-hue.addEventListener("change", () => {
-    imagenMeme.style.filter = `hue-rotate(${hue.value}deg)`;
-});
-
 const saturacion = document.querySelector("#saturacion");
-
-saturacion.addEventListener("change", () => {
-    imagenMeme.style.filter = `saturate(${saturacion.value}%)`;
-});
-
 const negativo = document.querySelector("#negativo");
 
-negativo.addEventListener("change", () => {
-    imagenMeme.style.filter = `invert(${negativo.value})`;
-});
+const filtros = () => {
+    imagenMeme.style.filter = `brightness(${brillo.value}) opacity(${opacidad.value}) contrast(${contraste.value}%) blur(${desenfoque.value}px) grayscale(${escalaDeGrises.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturacion.value}%) invert(${negativo.value})`
+}
+
+brillo.addEventListener("change", () => filtros());
+opacidad.addEventListener("change", () => filtros());
+contraste.addEventListener("change", () => filtros());
+desenfoque.addEventListener("change", () => filtros());
+escalaDeGrises.addEventListener("change", () => filtros());
+sepia.addEventListener("change", () => filtros());
+hue.addEventListener("change", () => filtros());
+saturacion.addEventListener("change", () => filtros());
+negativo.addEventListener("change", () => filtros());
+
 // ######### BOTON RESTAURAR FILTRO ###########
 botonRestaurar.addEventListener("click", () => {
     imagenMeme.style.filter = `brightness(${brillo.value = 1})`;
@@ -257,6 +227,8 @@ botonRestaurar.addEventListener("click", () => {
     imagenMeme.style.filter = `saturate(${saturacion.value = 1})`;
     imagenMeme.style.filter = `invert(${negativo.value = 0})`;
 });
+
+
 
 // ------------------- APARTADO TEXTO ----------------------
 
@@ -403,7 +375,6 @@ botonContornoOscuro.addEventListener("click", () => {
 espaciado.addEventListener ("change", () => {
     contenedorTextoSuperior.style.padding = `${espaciado.value}px 20px`;
     contenedorTextoInferior.style.padding = `${espaciado.value}px 20px`;
-    // imagenMeme.style.height = "100%";
 })
 
 // ########### INTERLINEADO DEL TEXTO #################
