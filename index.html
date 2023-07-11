@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web que permite generar tus propios memes personalizados">
     <meta property="og:title" content="Generador de memes">
     <meta property="og:description" content="Sitio web que permite generar tus propios memes personalizados">
     <meta property="og:image" content="https://i.imgur.com/VhrRmWX.png">
@@ -215,13 +216,13 @@
                 <input type="number" name="" id="tamanio-fuente"
                     class="numero-fuente inputs-personalizados is-focus is-hover" value="40">
                 <div class="alineacion-fuente">
-                    <button class="boton-alineancion inputs-personalizados is-hover" id="boton-alineacion-izquierda">
+                    <button class="boton-alineancion inputs-personalizados is-hover is-focus" id="boton-alineacion-izquierda">
                         <i class="fa-solid fa-align-left" id="icono-izquierda"></i>
                     </button>
-                    <button class="boton-alineancion inputs-personalizados is-hover" id="boton-alineacion-centro">
+                    <button class="boton-alineancion inputs-personalizados is-hover is-focus" id="boton-alineacion-centro">
                         <i class="fa-solid fa-align-center" id="icono-centro"></i>
                     </button>
-                    <button class="boton-alineancion inputs-personalizados is-hover" id="boton-alineacion-derecha">
+                    <button class="boton-alineancion inputs-personalizados is-hover is-focus" id="boton-alineacion-derecha">
                         <i class="fa-solid fa-align-right" id="icono-derecha"></i>
                     </button>
                 </div>
@@ -234,7 +235,7 @@
                     COLOR
                 </h4>
                 <div class="contenedor-color contenedor-texto-color" id="contenedor-texto-color">
-                    <input type="color" name="" id="color-texto" class="texto-color inputs-personalizados" value="#000000">
+                    <input type="color" name="" id="color-texto" class="texto-color inputs-personalizados is-focus" value="#000000">
                     <p class="color" id="hexadecimal-color-texto">#000000</p>
                 </div>
             </div>
@@ -243,7 +244,7 @@
                     FONDO
                 </h4>
                 <div class="contenedor-color contenedor-texto-color" id="contenedor-texto-fondo">
-                    <input type="color" name="" id="fondo-texto" class="texto-fondo inputs-personalizados" value="#FFFFFF">
+                    <input type="color" name="" id="fondo-texto" class="texto-fondo inputs-personalizados is-focus" value="#FFFFFF">
                     <p class="color" id="hexadecimal-fondo-texto">#FFFFFF</p>
                 </div>
             </div>
@@ -260,7 +261,7 @@
                 <button class="contorno inputs-personalizados is-focus is-hover" id="sin-contorno">
                     Ninguno
                 </button>
-                <button class="contorno inputs-personalizados is-hover" id="contorno-claro">
+                <button class="contorno inputs-personalizados is-focus is-hover" id="contorno-claro">
                     Claro
                 </button>
                 <button class="contorno inputs-personalizados is-focus is-hover" id="contorno-oscuro">
