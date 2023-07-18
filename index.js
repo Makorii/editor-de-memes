@@ -35,7 +35,7 @@ const resizeWindow = () => {
     }
 }
 
-window.addEventListener("resize", resizeWindow)
+window.addEventListener("resize", resizeWindow);
 
 // ############# MODO OSCURO/ MODO CLARO #############
 
@@ -248,7 +248,7 @@ const contenedorTextoSuperior = document.querySelector("#texto-arriba");
 
 textoSuperior.addEventListener("input", () => {
     contenedorTextoSuperior.innerText = `${textoSuperior.value}`;
-})
+});
 
 const contenedorTextoInferior = document.querySelector("#texto-abajo");
 
@@ -330,7 +330,7 @@ fondoTexto.addEventListener("input", () => {
     contenedorTextoSuperior.style.backgroundColor = `${fondoTexto.value}`;
     contenedorTextoInferior.style.backgroundColor = `${fondoTexto.value}`;
     hexadecimalFondoTexto.innerHTML = `${fondoTexto.value}`.toUpperCase();
-})
+});
 
 const colorTexto = document.getElementById("color-texto");
 const hexadecimalColorTexto = document.getElementById("hexadecimal-color-texto");
