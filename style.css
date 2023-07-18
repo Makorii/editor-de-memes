@@ -133,6 +133,7 @@ body {
 .apartado {
     color: white;
     padding: 20px;
+    overflow: scroll;
 }
 
 .boton-responsive {
