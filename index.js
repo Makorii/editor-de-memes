@@ -1,4 +1,3 @@
-console.log(window.innerWidth)
 // ######## OCUTAR/MOSTRAR APARTADOS IMAGEN Y TEXTO ########
 const apartadoTexto = document.getElementById("apartado-texto");
 const apartadoImagen = document.getElementById("apartado-imagen");
@@ -27,17 +26,16 @@ botonCerrarTexto.addEventListener("click", () => {
     apartadoTexto.style.display = "none";
 });
 
-// const resizeWindow = () => {
-//     if(body.getBoundingClientRect().width > 1300) {
-//         apartadoImagen.classList.toggle("oculto")
-//         apartadoTexto.classList.toggle("oculto")
-//     } else {
-//         apartadoImagen.style.display = "none";
-//         apartadoTexto.style.display = "none";
-//     }
-// }
+const resizeWindow = () => {
+    if(body.getBoundingClientRect().width > 1300) {
+        apartadoImagen.style.display = "block";
+    } else {
+        apartadoImagen.style.display = "none";
+        apartadoTexto.style.display = "none";
+    }
+}
 
-// window.addEventListener("resize", resizeWindow)
+window.addEventListener("resize", resizeWindow)
 
 // ############# MODO OSCURO/ MODO CLARO #############
 
@@ -249,13 +247,13 @@ botonRestaurar.addEventListener("click", () => {
 const contenedorTextoSuperior = document.querySelector("#texto-arriba");
 
 textoSuperior.addEventListener("input", () => {
-    contenedorTextoSuperior.innerHTML = `${textoSuperior.value}`;
+    contenedorTextoSuperior.innerText = `${textoSuperior.value}`;
 })
 
 const contenedorTextoInferior = document.querySelector("#texto-abajo");
 
 textoInferior.addEventListener("input", () => {
-    contenedorTextoInferior.innerHTML = `${textoInferior.value}`;
+    contenedorTextoInferior.innerText = `${textoInferior.value}`;
 });
 
 
@@ -392,7 +390,6 @@ espaciado.addEventListener ("change", () => {
 //ajustar imagen
 const ajustarImagen = () => {
     imagenMeme.style.height = `${imagenMeme.getBoundingClientRect().width}px`;
-    console.log(body.getBoundingClientRect())
 };
 
 window.addEventListener("resize", ajustarImagen);
