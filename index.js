@@ -389,11 +389,11 @@ espaciado.addEventListener ("change", () => {
 })
 
 //ajustar imagen
-// const ajustarImagen = () => {
-//     imagenMeme.style.height = `${imagenMeme.getBoundingClientRect().width}px`;
-// };
+const ajustarImagen = () => {
+    imagenMeme.style.height = `${imagenMeme.getBoundingClientRect().width}px`;
+};
 
-// window.addEventListener("resize", ajustarImagen);
+window.addEventListener("resize", ajustarImagen);
 
 // ########### INTERLINEADO DEL TEXTO #################
 interlineado.addEventListener("change", () => {
