@@ -393,7 +393,7 @@ espaciado.addEventListener ("change", () => {
 //     imagenMeme.style.height = `${imagenMeme.getBoundingClientRect().width}px`;
 // };
 
-window.addEventListener("resize", ajustarImagen);
+// window.addEventListener("resize", ajustarImagen);
 
 // ########### INTERLINEADO DEL TEXTO #################
 interlineado.addEventListener("change", () => {
