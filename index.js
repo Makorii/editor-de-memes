@@ -387,10 +387,11 @@ espaciado.addEventListener ("change", () => {
     contenedorTextoSuperior.style.padding = `${espaciado.value}px 20px`;
     contenedorTextoInferior.style.padding = `${espaciado.value}px 20px`;
 })
+
 //ajustar imagen
-const ajustarImagen = () => {
-    imagenMeme.style.height = `${imagenMeme.getBoundingClientRect().width}px`;
-};
+// const ajustarImagen = () => {
+//     imagenMeme.style.height = `${imagenMeme.getBoundingClientRect().width}px`;
+// };
 
 window.addEventListener("resize", ajustarImagen);
 
