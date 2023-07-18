@@ -15,7 +15,6 @@
     text-align: center;
     padding: 10px 0;
     color: white;
-    margin-bottom: 50px;
 }
 
 .header-titulo {
@@ -69,12 +68,12 @@ body {
 
 .main-oscuro {
     background-color: #4C3575;
+    height: calc(100vh - 122px);
     justify-content: center;
 }
 
 .tarjeta-meme {
-    width: 100%;
-    max-width: 620px;
+    width: 620px;
     height: 620px;
     text-align: center;
     background-color: black;
@@ -134,7 +133,6 @@ body {
 .apartado {
     color: white;
     padding: 20px;
-    overflow: scroll;
 }
 
 .boton-responsive {
