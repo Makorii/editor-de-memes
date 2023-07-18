@@ -35,7 +35,7 @@ const resizeWindow = () => {
     }
 }
 
-window.addEventListener("resize", resizeWindow)
+window.addEventListener("resize", resizeWindow);
 
 // ############# MODO OSCURO/ MODO CLARO #############
 
@@ -248,7 +248,7 @@ const contenedorTextoSuperior = document.querySelector("#texto-arriba");
 
 textoSuperior.addEventListener("input", () => {
     contenedorTextoSuperior.innerText = `${textoSuperior.value}`;
-})
+});
 
 const contenedorTextoInferior = document.querySelector("#texto-abajo");
 
@@ -330,7 +330,7 @@ fondoTexto.addEventListener("input", () => {
     contenedorTextoSuperior.style.backgroundColor = `${fondoTexto.value}`;
     contenedorTextoInferior.style.backgroundColor = `${fondoTexto.value}`;
     hexadecimalFondoTexto.innerHTML = `${fondoTexto.value}`.toUpperCase();
-})
+});
 
 const colorTexto = document.getElementById("color-texto");
 const hexadecimalColorTexto = document.getElementById("hexadecimal-color-texto");
@@ -361,7 +361,7 @@ const sinFondo = () => {
         contenedorTextoSuperior.style.backgroundColor = `${fondoTexto.value}`;
         contenedorTextoInferior.style.backgroundColor = `${fondoTexto.value}`;
     }
-}
+};
 
 fondoTransparente.addEventListener("click", () => sinFondo());
 
@@ -386,7 +386,8 @@ botonContornoOscuro.addEventListener("click", () => {
 espaciado.addEventListener ("change", () => {
     contenedorTextoSuperior.style.padding = `${espaciado.value}px 20px`;
     contenedorTextoInferior.style.padding = `${espaciado.value}px 20px`;
-})
+});
+
 //ajustar imagen
 const ajustarImagen = () => {
     imagenMeme.style.height = `${imagenMeme.getBoundingClientRect().width}px`;
@@ -398,7 +399,7 @@ window.addEventListener("resize", ajustarImagen);
 interlineado.addEventListener("change", () => {
     contenedorTextoSuperior.style.lineHeight = `${interlineado.value}`;
     contenedorTextoInferior.style.lineHeight = `${interlineado.value}`;
-})
+});
 
 // ########### BOTON DESCARGAR ################
 const meme = document.getElementById("meme");
