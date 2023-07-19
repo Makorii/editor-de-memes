@@ -380,7 +380,6 @@ input[type=color]::-webkit-color-swatch {
         width: 90%;
         max-width: 350px;
         max-height: 300px;
-        margin: 0;
     }
 
     .texto-meme {
