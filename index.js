@@ -67,6 +67,7 @@ const tituloHeader = document.getElementById("titulo-header");
 
 
 botonModoOscuro.addEventListener("click", () => {
+    body.classList.add("main-claro");
     botonModoOscuro.style.display = "none";
     botonModoClaro.style.display = "inline-block";
     header.classList.add("header-claro");
@@ -125,6 +126,7 @@ botonModoOscuro.addEventListener("click", () => {
 })
 
 botonModoClaro.addEventListener("click", () => {
+    body.classList.remove("main-claro");
     botonModoClaro.style.display = "none";
     botonModoOscuro.style.display = "inline-block";
     header.classList.remove("header-claro");
