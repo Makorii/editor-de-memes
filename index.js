@@ -248,13 +248,13 @@ botonRestaurar.addEventListener("click", () => {
 // ######## PERSONALIZAR TOP Y BOTTOM TEXT ############
 const contenedorTextoSuperior = document.querySelector("#texto-arriba");
 
-textoSuperior.addEventListener("input", () => {
+textoSuperior.addEventListener("change", () => {
     contenedorTextoSuperior.innerText = `${textoSuperior.value}`;
 });
 
 const contenedorTextoInferior = document.querySelector("#texto-abajo");
 
-textoInferior.addEventListener("input", () => {
+textoInferior.addEventListener("change", () => {
     contenedorTextoInferior.innerText = `${textoInferior.value}`;
 });
 
